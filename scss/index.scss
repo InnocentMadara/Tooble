@@ -23,26 +23,26 @@ body{
   z-index: 100;
 }
 .textContent{
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 1000px;
+  max-height: 1000px;
   z-index: 100;
   .text{
     position: fixed;
     top: 40%;
     left: 10%;
-    font-size: 100px;
+    font-size: 50px;
     color: white;
   }
 }
 .textContent2{
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 1000px;
+  max-height: 1000px;
   z-index: 100;
   .text2{
     position: fixed;
     top: 40%;
     left: 10%;
-    font-size: 100px;
+    font-size: 50px;
     color: white;
   }
 }

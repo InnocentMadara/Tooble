@@ -25,7 +25,7 @@ const scene2 = new ScrollMagic.Scene({
   triggerElement: videoWrapper,
   triggerHook: 0
 })
-.setTween(TweenMax.fromTo(section, 1, {opacity: 1}, {opacity: 0}))
+.setTween(TweenMax.fromTo(document.querySelector('.text'), 1, {opacity: 1, top: "40%"}, {opacity: 0, top: "30%"}))
 .addTo(controller)
 
 const scene3 = new ScrollMagic.Scene({
@@ -33,7 +33,7 @@ const scene3 = new ScrollMagic.Scene({
   triggerElement: document.querySelector(".textContent2"),
   triggerHook: 0
 })
-.setTween(TweenMax.fromTo(document.querySelector(".text2"), 1, {opacity: 0}, {opacity: 1}))
+.setTween(TweenMax.fromTo(document.querySelector(".text2"), 1, {opacity: 0, top: "30%"}, {opacity: 1, top: "40%"}))
 .addTo(controller)
 
 
