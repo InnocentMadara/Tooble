@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="icon" href="images/favicon.png">
-  <title>Tooble</title>
-  <link rel="stylesheet" href="./css/index.min.css">
-</head>
-<body>
-  <header class="header">
 
-  </header>
-  <main class="main">
-    <div class="bg">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="icon" href="images/favicon.png">
+    <title>Tooble</title>
+    <link rel="stylesheet" href="./css/index.min.css">
+  </head>
 
-      <div class="textContent">
-        <p class="text">Illuminate.</p>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="">
+        <img src="./images/logo.svg" alt="logo">
+      </a>
+      <button class="header__discount">
+        Get Discount
+      </button>
+    </header>
+    <main class="main">
+      <div class="bg">
+
+        <div class="textContent">
+          <p class="text1 text">Illuminate<span class="gold">.</span></p>
+        </div>
+        <div class="textContent2">
+          <p class="text2 text">Folding built-in lamp<span class="gold">.</span></p>
+        </div>
+
+
+        <span data-time="6.9" class="header-invert trigger"></span>
+        <span data-time="1" class="text1-end trigger"></span>
+        <span data-time="2" class="text2-start trigger"></span>
+        <span data-time="5" class="text2-end trigger"></span>
       </div>
-      <div class="textContent2">
-        <p class="text2">Folding built-in lamp.</p>
-      </div>
-    
-    </div>
       <div class="videoWrapper">
         <video src="./video/T-10.mp4"></video>
-    </div>
-    <div class="slider">
-      
-    </div>
-  </main>
-  <footer class="footer">
-    footer
-  </footer>
+      </div>
+      </div>
+      <div class="slider">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" integrity="sha512-6MCPs9fbSIt6mTpJH2Lbo9Kk71gcgwY85BCqJGP04x+O08W3m/OiKfMiMc4VQKYn+DCtAQwpGumWeD0cACeRsQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./script.js"></script>
-</body>
+      </div>
+    </main>
+    <footer class="footer">
+      footer
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
+      integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"
+      integrity="sha512-6MCPs9fbSIt6mTpJH2Lbo9Kk71gcgwY85BCqJGP04x+O08W3m/OiKfMiMc4VQKYn+DCtAQwpGumWeD0cACeRsQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"
+      integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/scenes.js"></script>
+  </body>
+
 </html>

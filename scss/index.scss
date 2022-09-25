@@ -1,56 +1,84 @@
 @import "./vars.scss";
+@import "./fonts.scss";
 
-body{
+@import "./header.scss";
+
+body {
   background: $dark-gradient;
+  overflow-x: hidden;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.videoWrapper{
+.gold{
+  color: $gold;
+}
+.videoWrapper {
   height: 100vh;
   width: 100%;
-  video{
+
+  video {
     width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover;
   }
 }
-.bg{
+
+.bg {
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
-.textContent{
+
+.text {
+  opacity: 0;
+  font-family: "General Sans";
+  font-weight: 500;
+}
+.textContent {
   min-height: 1000px;
   max-height: 1000px;
-  z-index: 100;
-  .text{
+  z-index: 1;
+
+
+  .text1 {
+    font-size: 128px;
     position: fixed;
-    top: 40%;
-    left: 10%;
-    font-size: 50px;
+    top: 50%;
+    left: 100px;
     color: white;
   }
 }
-.textContent2{
+
+.textContent2 {
   min-height: 1000px;
   max-height: 1000px;
-  z-index: 100;
-  .text2{
+  z-index: 1;
+
+  .text2 {
+    font-size: 64px;
     position: fixed;
     top: 40%;
-    left: 10%;
-    font-size: 50px;
+    left: 100px;
     color: white;
   }
 }
-.slider{
+
+.trigger {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.slider {
   min-height: 100vh;
   background: url("../images/image.jpg");
 }
-.footer{
+
+.footer {
   background: $black;
   color: $white;
   font-size: 15vw;
