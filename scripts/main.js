@@ -1,37 +1,49 @@
 'use strict';
 
-let video = {
-  framerate: 50,
-  duration: 54,
-  scrollSensivity: 1
-}
+const videoStartDuration = 10;
+const videoMainDuration = 54;
 
-const videoWrapper = document.querySelector('.videoWrapper');
-const videoElement = videoWrapper.firstElementChild;
+// const videoStart = document.querySelector('.video-start');
+// const videoStartElement = videoStart.firstElementChild;
+const videoMain = document.querySelector('.video-main');
+const videoMainElement = videoMain.firstElementChild;
 
 const controller = new ScrollMagic.Controller();
 
+// const scene = new ScrollMagic.Scene({
+//   duration: videoStartDuration * 1000,
+//   triggerElement: videoStart,
+//   triggerHook: 0
+// })
+// .setPin(videoStart)
+// .addTo(controller);
+
 const scene = new ScrollMagic.Scene({
-  duration: video.duration * 1000 * video.scrollSensivity,
-  triggerElement: videoWrapper,
+  duration: videoMainDuration * 1000,
+  triggerElement: videoMain,
   triggerHook: 0
 })
-.setPin(videoWrapper)
+.setPin(videoMain)
 .addTo(controller);
 
-let scrollPosition = 0;
-let delay = 0;
+let scrollPositionStart = 0;
+let scrollPositionMain = 0;
 
 scene.on("update", e => {
-  scrollPosition = e.scrollPos / (1000 * video.scrollSensivity);
+  scrollPositionStart = e.scrollPos / 1000;
+  scrollPositionMain = (e.scrollPos - 10000) / 1000;
 })
 
-setInterval(function() {
-  delay += (scrollPosition - delay);
-  videoElement.currentTime = delay;
-}, 1000/video.framerate);
+requestAnimationFrame(setVideoFrame);
+
+function setVideoFrame () {
+  requestAnimationFrame(setVideoFrame);
+  // videoStartElement.currentTime = scrollPositionStart;
+  videoMainElement.currentTime = scrollPositionStart;//<<<
+}
+
 
 document.querySelectorAll('.trigger').forEach(trigger => {
   trigger.style.top = trigger.dataset.time * 1000 + 'px';
-  console.log(trigger);
+  // console.log(trigger);
 })

@@ -15,28 +15,102 @@
       <a class="header__logo" href="">
         <img src="./images/logo.svg" alt="logo">
       </a>
-      <button class="header__discount">
-        Get Discount
-      </button>
+      <div class="header__discount-menu discount-menu">
+        <button class="discount-menu__open-button">
+          Get Discount
+        </button>
+
+        <div class="discount-menu__content">
+          <button class="discount-menu__close-button">
+            Close
+          </button>
+          <p class="discount-menu__title">
+            Get Discount<span class="gold">.</span>
+          </p>
+          <p class="discount-menu__text">
+            Submit a request and we will prepare
+            a special discount for you when sales start
+          </p>
+          <input type="text" class="discount-menu__input">
+          <button class="discount-menu__submit-button">
+            Get Discount
+          </button>
+        </div>
+      </div>
     </header>
     <main class="main">
       <div class="bg">
 
-        <div class="textContent">
-          <p class="text1 text">Illuminate<span class="gold">.</span></p>
-        </div>
-        <div class="textContent2">
-          <p class="text2 text">Folding built-in lamp<span class="gold">.</span></p>
+        <p class="text1 text">Illuminate<span class="gold">.</span></p>
+        <p class="text2 text">Folding built-in lamp<span class="gold">.</span></p>
+
+        <div class="text3-block">
+          <p class="text3 text">Configurable smart screen<span class="gold">.</span></p>
+          <ul class="text3-list">
+            <li class="text3-item text3-item1">Alarm clock</li>
+            <li class="text3-item text3-item2">Clock with a date</li>
+            <li class="text3-item text3-item3">PM2.5 air sensor</li>
+            <li class="text3-item text3-item4">CO2 air sensor</li>
+            <li class="text3-item text3-item5">Temperature and moisture air sensor</li>
+            <li class="text3-item text3-item6">Battery level</li>
+          </ul>
         </div>
 
+        <div class="text4 text">Adjustable height legs<span class="gold">.</span></div>
+        
+        <div class="text5-block text">
+          <p class="text5">Drawer<br>& collapsible shelf<span class="gold">.</span></p>
+          <ul class="text5-list">
+            <p class="text5-heading">Materials</p>
+            <li class="text5-item text5-item1">Wooden HPL</li>
+            <li class="text5-item text5-item1">ABS Plastic</li>
+            <li class="text5-item text5-item1">Steel</li>
+          </ul>
+        </div>
 
+        <div class="text6 text">Additional shelf<span class="gold">.</span></div>
+        <div class="text7 text">Charge<span class="gold">.</span></div>
+        <div class="text8 text">Wireless charger<span class="gold">.</span></div>
+        <div class="text9 text">2 USB ports, 1 Type-C<span class="gold">.</span></div>
+        <div class="text10 text">Cable<br>management system<span class="gold">.</span></div>
+
+        <span data-time="10" class="video-main-trigger trigger"></span>
         <span data-time="6.9" class="header-invert trigger"></span>
         <span data-time="1" class="text1-end trigger"></span>
+
         <span data-time="2" class="text2-start trigger"></span>
         <span data-time="5" class="text2-end trigger"></span>
+
+        <span data-time="7" class="text3-start trigger"></span>
+        <span data-time="10" class="textlist-start trigger"></span>
+        <span data-time="23" class="text3-end trigger"></span>
+
+        <span data-time="24" class="text4-start trigger"></span>
+        <span data-time="28" class="text4-end trigger"></span>
+
+        <span data-time="29" class="text5-start trigger"></span>
+        <span data-time="35" class="text5-end trigger"></span>
+
+        <span data-time="36" class="text6-start trigger"></span>
+        <span data-time="38" class="text6-end trigger"></span>
+
+        <span data-time="40" class="text7-start trigger"></span>
+        <span data-time="44" class="text7-end trigger"></span>
+
+        <!-- <span data-time="45" class="text8-start trigger"></span>
+        <span data-time="48" class="text8-end trigger"></span> -->
+
+        <span data-time="46" class="text9-start trigger"></span>
+        <span data-time="48" class="text9-end trigger"></span>
+
+        <span data-time="50" class="text10-start trigger"></span>
+        <span data-time="53" class="text10-end trigger"></span>
       </div>
-      <div class="videoWrapper">
-        <video src="./video/T-10.mp4"></video>
+      <!-- <div class="video-block video-start">
+        <video src="./video/start.mp4"></video>
+      </div> -->
+      <div class="video-block video-main">
+        <video src="./video/main.mp4"></video>
       </div>
       </div>
       <div class="slider">
@@ -61,6 +135,7 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/scenes.js"></script>
+    <script src="./scripts/menu.js"></script>
   </body>
 
 </html>

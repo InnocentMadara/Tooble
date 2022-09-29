@@ -14,7 +14,12 @@
   }
 
   // .header__discount
-  &__discount {
+  &__discount-menu {
+
+  }
+}
+.discount-menu{
+  &__open-button{
     background: transparent;
     outline: 0;
     border: 0;
@@ -35,5 +40,37 @@
       width: 100%;
       height: 2px;
     }
+  }
+
+  &__content{
+    background: $white;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    transform: translateX(100%);
+    
+  }
+  .discount-menu--active &__content{
+    transform: translateX(0%);
+  }
+
+  &__close-button{
+
+  }
+
+  &__title{
+
+  }
+
+  &__text{
+
+  }
+
+  &__input{
+
+  }
+
+  &__submit-button{
+
   }
 }
