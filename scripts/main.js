@@ -27,11 +27,9 @@ const scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 let scrollPositionStart = 0;
-let scrollPositionMain = 0;
 
 scene.on("update", e => {
   scrollPositionStart = e.scrollPos / 1000;
-  scrollPositionMain = (e.scrollPos - 10000) / 1000;
 })
 
 requestAnimationFrame(setVideoFrame);
