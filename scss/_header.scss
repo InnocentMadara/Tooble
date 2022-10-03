@@ -43,34 +43,98 @@
   }
 
   &__content{
+    z-index: 100;
     background: $white;
     position: absolute;
-    top: 100px;
+    top: 0;
     right: 0;
     transform: translateX(100%);
     
   }
+
   .discount-menu--active &__content{
+    display: flex;
+    flex-direction: column;
     transform: translateX(0%);
   }
 
   &__close-button{
+    margin: 40px 100px 40px auto;
 
+    background: transparent;
+    outline: 0;
+    border: 0;
+    position: relative;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    color: $black;
+    font-family: "General Sans";
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      background: $gold;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+  }
+
+  &__main-block{
+    margin: 0 162px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 640px;
   }
 
   &__title{
-
+    font-family: "General Sans";
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 130px;
+    margin-bottom: 40px;
   }
-
+  
   &__text{
-
+    font-family: "General Sans";
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 60px;
   }
-
+  
   &__input{
-
+    font-family: "General Sans";
+    align-self: stretch;
+    font-size: 32px;
+    line-height: 43px;
+    border: 2px solid $gold;
+    border-radius: 6px;
+    margin-bottom: 60px;
+    padding: 24px 40px;
+    color: $black;
+    outline-color: rgba($color: $gold, $alpha: 0.8);
+    &:focus::placeholder{
+      opacity: 0;
+    }
   }
-
+  
+  
   &__submit-button{
+    font-family: "General Sans";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    
+    cursor: pointer;
+    background: $gold;
+    width: 164px;
+    height: 164px;
+    border: 0;
+    border-radius: 1000px;
 
   }
 }
