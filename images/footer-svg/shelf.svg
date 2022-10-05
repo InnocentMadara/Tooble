@@ -1,0 +1,6 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.75">
+<path d="M17 2C17 1.44772 17.4477 1 18 1H22C22.5523 1 23 1.44772 23 2V22C23 22.5523 22.5523 23 22 23H18C17.4477 23 17 22.5523 17 22V2Z" stroke="white" stroke-width="2"/>
+<rect opacity="0.75" x="17" y="1" width="6" height="16" rx="1" transform="rotate(90 17 1)" stroke="white" stroke-width="2"/>
+</g>
+</svg>

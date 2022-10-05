@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="icon" href="./images/favicon.png">
+    
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="./css/index.min.css">
     <link rel="stylesheet" href="./css/normalize.min.css">
     <title>Tooble</title>
@@ -42,9 +44,6 @@
     </header>
     <main class="main">
       <div class="fade-in"></div>
-      <div class="start">
-
-      </div>
 
       <div class="video-block video-start">
         <video src="./video/start.mp4"></video>
@@ -54,16 +53,16 @@
         <video src="./video/main.mp4"></video>
       </div>
 
-        <div class="start text">
+        <div class="start appearing-block">
           <img src="./images/logo-intro.svg" alt="" class="logo-start">
           <p class="text-start">Simple & Smart Side Table<span class="gold">.</span></p>
           <button class="get-discount">Get Discount</button>
         </div>
 
-        <p class="text1 text">Illuminate<span class="gold">.</span></p>
-        <p class="text2 text">Folding built-in lamp<span class="gold">.</span></p>
+        <p class="text1 appearing-block">Illuminate<span class="gold">.</span></p>
+        <p class="text2 appearing-block">Folding built-in lamp<span class="gold">.</span></p>
 
-        <div class="text3-block">
+        <div class="text3-block appearing-block">
           <p class="text3 text">Configurable smart screen<span class="gold">.</span></p>
           <ul class="text3-list">
             <li class="text3-item text3-item1">Alarm clock</li>
@@ -75,9 +74,9 @@
           </ul>
         </div>
 
-        <div class="text4 text">Adjustable height legs<span class="gold">.</span></div>
+        <div class="text4 appearing-block">Adjustable height legs<span class="gold">.</span></div>
 
-        <div class="text5-block text">
+        <div class="text5-block appearing-block">
           <p class="text5">Drawer<br>& collapsible shelf<span class="gold">.</span></p>
           <ul class="text5-list">
             <p class="text5-heading">Materials</p>
@@ -87,33 +86,41 @@
           </ul>
         </div>
 
-        <div class="text6 text">Additional shelf<span class="gold">.</span></div>
-        <div class="text7 text">Charge<span class="gold">.</span></div>
-        <div class="text8 text">Wireless charger<span class="gold">.</span></div>
-        <div class="text9 text">2 USB ports, 1 Type-C<span class="gold">.</span></div>
-        <div class="text10 text">Cable<br>management system<span class="gold">.</span></div>
+        <div class="text6 appearing-block">Additional shelf<span class="gold">.</span></div>
+        <div class="text7 appearing-block">Charge<span class="gold">.</span></div>
+        <div class="text8 appearing-block">Wireless charger<span class="gold">.</span></div>
+        <div class="text9 appearing-block">2 USB ports, 1 Type-C<span class="gold">.</span></div>
+        <div class="text10 appearing-block">Cable<br>management system<span class="gold">.</span></div>
+
+
+      <div class="triggers">
 
         <span data-time="2" class="text-intro-start trigger"></span>
         <span data-time="6" class="text-intro-end trigger"></span>
-
+        
         <span data-time="8" class="header-appearing trigger"></span>
-
+        
         <span data-time="10" class="video-main-trigger trigger"></span>
         <span data-time="16.9" class="header-invert trigger"></span>
-
+        
         <span data-time="10" class="text1-start trigger"></span>
         <span data-time="11" class="text1-end trigger"></span>
-
+          
         <span data-time="12" class="text2-start trigger"></span>
         <span data-time="15" class="text2-end trigger"></span>
-
+        
         <span data-time="17" class="text3-start trigger"></span>
         <span data-time="20" class="textlist-start trigger"></span>
         <span data-time="33" class="text3-end trigger"></span>
-
+        
+        <span data-time="21" class="textlist-item2 trigger"></span>
+        <span data-time="24" class="textlist-item3 trigger"></span>
+        <span data-time="26.5" class="textlist-item4 trigger"></span>
+        <span data-time="29.5" class="textlist-item6 trigger"></span>
+        
         <span data-time="34" class="text4-start trigger"></span>
         <span data-time="38" class="text4-end trigger"></span>
-
+        
         <span data-time="39" class="text5-start trigger"></span>
         <span data-time="45" class="text5-end trigger"></span>
 
@@ -125,19 +132,102 @@
 
         <!-- <span data-time="45" class="text8-start trigger"></span>
         <span data-time="48" class="text8-end trigger"></span> -->
-
+        
         <span data-time="56" class="text9-start trigger"></span>
         <span data-time="58" class="text9-end trigger"></span>
-
+        
         <span data-time="60" class="text10-start trigger"></span>
         <span data-time="63" class="text10-end trigger"></span>
+      </div>
         
-      <!-- </div> -->
       <div class="slider">
+        <div class="slider__container swiper">
+          <div class="slider__carousel swiper-wrapper">
+            
+            <div class="slider__slide slide swiper-slide">
+              <img class="slide__image" src="./images/living-room.jpg" alt="">
+            </div>
+
+            <div class="slider__slide slide swiper-slide">
+              <img class="slide__image" src="./images/bedroom.jpg" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="slider__content">
+          <h2 class="slider__title">
+            Thoughtful design makes TOOBLE fit in every room
+          </h2>
+          <div class="slider__pagination swiper-pagination"></div>
+        </div>
       </div>
     </main>
     <footer class="footer">
-      footer
+      <div class="footer__discount-block">
+        <h2 class="footer__title">
+          Get a discount<span class="gold">.</span>
+        </h2>
+        <p class="footer__text">
+          Submit a request and we will prepare a special discount for you when sales start
+        </p>
+        <div class="footer__submit-block">
+          <input type="text" placeholder="yourmail@inbox.com" class="footer__input  ui-input">
+          <button class="footer__submit-button">Get Discount</button>
+        </div>
+      </div>
+      <div class="footer__features-block">
+        <p class="footer__list-title">Additional Features</p>
+        <ul class="footer__list-block">
+
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/alarm-clock.svg" alt="" class="footer__list-img">
+            Alarm Clock
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/clock.svg" alt="" class="footer__list-img">
+            Clock With a Date
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/wind.svg" alt="" class="footer__list-img">
+            PM2.5 Air Sensor
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/carbon-dioxide.svg" alt="" class="footer__list-img">
+            CO2 Air Sensor
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/thermometer.svg" alt="" class="footer__list-img">
+            Temperature & Moisture Air Sensor
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/shelf.svg" alt="" class="footer__list-img">
+            Additional Shelf
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/battery.svg" alt="" class="footer__list-img">
+            Battery Level
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/wifi.svg" alt="" class="footer__list-img">
+            Wireless Charging
+          </li>
+          <li class="footer__list-item">
+            <img src="./images/footer-svg/drawer.svg" alt="" class="footer__list-img">
+            Drawer (10*10*2.5 in.) 
+          </li>
+
+        </ul>
+      </div>
+      <div class="footer__bottom-block">
+        <p class="footer__copyright">© Tooble – Smart Table, 2022</p>
+        <ul class="footer__terms-list">
+          <li class="footer__terms-item">Privacy Policy</li>
+          <li class="footer__terms-item">Terms and Conditions</li>
+        </ul>
+        <button class="footer__arrow">
+          <img class="footer__arrow-img" src="./images/arrow.svg" alt="">
+        </button>
+      </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
@@ -156,6 +246,8 @@
     <script src="./scripts/scenes.js"></script>
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/fade-in.js"></script>
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script src="./scripts/slider.js"></script>
   </body>
 
 </html>

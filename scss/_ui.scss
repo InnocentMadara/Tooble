@@ -1,0 +1,28 @@
+input{
+  border: 2px solid #FFFFFF40;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: $white;
+  cursor: pointer;
+  outline: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &::placeholder{
+    color: rgba(255, 255, 255, 0.25);
+    transition: opacity 0.3s;
+  }
+  &:hover{
+    border-color: #FFFFFF80;
+  }
+  &:focus{
+    border-color: $gold;
+    box-shadow: 0 0 20px 0 rgba($gold, 0.25);
+
+    &::placeholder{
+      opacity: 0;
+    }
+    &:hover{
+      cursor: text;
+    }
+  }
+}

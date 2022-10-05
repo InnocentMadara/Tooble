@@ -49,11 +49,13 @@ div.start {
   left: 100px;
   width: 100%;
 }
-.text {
+.appearing-block {
+  pointer-events: none;
   opacity: 0;
   font-family: "General Sans";
   font-weight: 500;
   position: fixed;
+  z-index: 12;
   font-size: 64px;
   left: 100px;
   color: $white;
@@ -82,10 +84,15 @@ div.start {
     margin-top: 20px;
     font-size: 24px;
     line-height: 32px;
-    color: rgba($black, 0.5);  
+    color: $black;
+    opacity: 0.5;  
     
     font-family: "General Sans";
     font-weight: 500;
+    
+    &:first-of-type{
+      opacity: 1;
+    }
   }
 }
 .text4{

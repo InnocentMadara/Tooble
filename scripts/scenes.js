@@ -29,6 +29,22 @@ addAnimation('.text3-block', {top: "62%"}, {top: "50%"}, ".textlist-start", 1, 1
 addAnimation('.text3-list', {opacity: 0}, {opacity: 1}, ".textlist-start", 1, 1)
 addAnimation('.text3-block', {opacity: 0, top: "67%"}, {opacity: 1, top: "62%"}, ".text3-start", 0.5, 1)
 
+
+addAnimation('.text3-item4', {opacity: 1}, {opacity: 0.5}, ".textlist-item6", 0.5, 1)
+addAnimation('.text3-item5', {opacity: 1}, {opacity: 0.5}, ".textlist-item6", 0.5, 1)
+addAnimation('.text3-item6', {opacity: 0.5}, {opacity: 1}, ".textlist-item6", 0.5, 1)
+
+addAnimation('.text3-item3', {opacity: 1}, {opacity: 0.5}, ".textlist-item4", 0.5, 1)
+addAnimation('.text3-item4', {opacity: 0.5}, {opacity: 1}, ".textlist-item4", 0.5, 1)
+addAnimation('.text3-item5', {opacity: 0.5}, {opacity: 1}, ".textlist-item4", 0.5, 1)
+
+addAnimation('.text3-item2', {opacity: 1}, {opacity: 0.5}, ".textlist-item3", 0.5, 1)
+addAnimation('.text3-item3', {opacity: 0.5}, {opacity: 1}, ".textlist-item3", 0.5, 1)
+
+addAnimation('.text3-item1', {opacity: 1}, {opacity: 0.5}, ".textlist-item2", 0.5, 1)
+addAnimation('.text3-item2', {opacity: 0.5}, {opacity: 1}, ".textlist-item2", 0.5, 1)
+
+
 addAnimation('.text-list', {opacity: 0}, {opacity: 1}, ".textlist-start", 0.5, 1)
 
 addAnimation('.text4', {opacity: 1, top: "50%"}, {opacity: 0, top: "45%"}, ".text4-end", 0.5, 1)
