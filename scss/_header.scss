@@ -7,6 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include mq(600){
+    padding: 28px 20px;
+  };
 
   // .header__logo
   &__logo {
@@ -48,18 +51,21 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(100%);
-    
-  }
-
-  .discount-menu--active &__content{
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
     display: flex;
     flex-direction: column;
-    transform: translateX(0%);
+  }
+  
+  .discount-menu--active &__content{
+    opacity: 1;
+    pointer-events: auto;
   }
 
   &__close-button{
-    margin: 40px 100px 40px auto;
+    align-self: flex-end;
+    margin: 40px 100px 40px;
 
     background: transparent;
     outline: 0;
@@ -124,17 +130,6 @@
   
   
   &__submit-button{
-    font-family: "General Sans";
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    
-    cursor: pointer;
-    background: $gold;
-    width: 164px;
-    height: 164px;
-    border: 0;
-    border-radius: 1000px;
 
   }
 }

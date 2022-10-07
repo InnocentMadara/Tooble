@@ -4,9 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="icon" href="./images/favicon.png">
+    <link rel="icon" type="icon" href="./images/favicon.png">
     
-    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="./css/index.min.css">
     <link rel="stylesheet" href="./css/normalize.min.css">
     <title>Tooble</title>
@@ -35,8 +34,10 @@
               a special discount for you when sales start
             </p>
           <input type="text" class="discount-menu__input" placeholder="e-mail">
-          <button class="discount-menu__submit-button">
-            Get Discount
+          <button light class="discount-menu__submit-button submit-button">
+            <div class="submit-button__inner">
+              Get Discount
+            </div>
           </button>
         </div>
         </div>
@@ -155,10 +156,12 @@
           </div>
         </div>
         <div class="slider__content">
-          <h2 class="slider__title">
-            Thoughtful design makes TOOBLE fit in every room
-          </h2>
-          <div class="slider__pagination swiper-pagination"></div>
+          <div class="slider__text-block">
+            <h2 class="slider__title">
+              Thoughtful design makes TOOBLE fit in every room
+            </h2>
+            <div class="slider__pagination swiper-pagination"></div>
+          </div>
         </div>
       </div>
     </main>
@@ -172,7 +175,11 @@
         </p>
         <div class="footer__submit-block">
           <input type="text" placeholder="yourmail@inbox.com" class="footer__input  ui-input">
-          <button class="footer__submit-button">Get Discount</button>
+          <button class="footer__submit-button submit-button">
+            <div class="submit-button__inner">
+              Get Discount
+            </div>
+          </button>
         </div>
       </div>
       <div class="footer__features-block">

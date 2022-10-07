@@ -26,3 +26,68 @@ input{
     }
   }
 }
+
+.submit-button{
+  background: transparent;
+  border: 0;
+  width: 204px;
+  height: 204px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+
+  &__inner{
+    box-shadow: 0 0 0 10px rgba($gold, 0.05),
+    0 0 0 20px rgba($gold, 0.05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "General Sans";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    
+    cursor: pointer;
+    background: $gold;
+    width: 164px;
+    height: 164px;
+    border: 0;
+    border-radius: 1000px;
+
+    transition: all 0.3s;
+  }
+  &[light] &__inner{
+    box-shadow: 0 0 0 10px rgba($gold, 0.25),
+    0 0 0 20px rgba($gold, 0.25);
+  }
+  &:hover{
+    .submit-button__inner{
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 0 transparent;
+    }
+    &:disabled .submit-button__inner{
+      width: 164px;
+      height: 164px;
+      box-shadow: 0 0 0 10px rgba($gold, 0.05),
+      0 0 0 20px rgba($gold, 0.05);
+    }
+    &[light]:disabled .submit-button__inner{
+      box-shadow: 0 0 0 10px rgba($gold, 0.25),
+      0 0 0 20px rgba($gold, 0.25);
+    }
+  }
+  &:focus{
+    .submit-button__inner{
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 10px rgba($gold, 0.05);
+    }
+  }
+  &:disabled{
+    opacity: 0.2;
+  }
+}
