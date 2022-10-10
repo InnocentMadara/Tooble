@@ -7,16 +7,20 @@ div.start {
   left: 0;
   width: 100%;
 }
+
 .text {
   z-index: 15;
 }
+
 .logo-start {
   margin-bottom: 44px;
 }
+
 .text-start {
   margin-bottom: 44px;
   font-size: 32px;
 }
+
 .get-discount {
   background: transparent;
   outline: 0;
@@ -43,12 +47,13 @@ div.start {
 }
 
 
-.text3-block{
+.text3-block {
   position: fixed;
   transform: translateY(-50%);
   left: 100px;
   width: 100%;
 }
+
 .appearing-block {
   pointer-events: none;
   opacity: 0;
@@ -61,60 +66,77 @@ div.start {
   color: $white;
   transform: translateY(-50%);
 }
-.text3, .text4, .text5-block, .text6, .text7, .text8, .text9, .text10{
+
+.text3,
+.text4,
+.text5-block,
+.text6,
+.text7,
+.text8,
+.text9,
+.text10 {
   color: $black;
 }
+
 .text1 {
   font-size: 128px;
 }
+
 .text2 {
   font-size: 64px;
 }
+
 .text3 {
   font-size: 64px;
   opacity: 1;
   transform: translateY(0%);
   position: static;
 }
-.text3-list{
+
+.text3-list {
   margin-top: 20px;
   opacity: 0;
 
-  .text3-item{
+  .text3-item {
     margin-top: 20px;
     font-size: 24px;
     line-height: 32px;
     color: $black;
-    opacity: 0.5;  
-    
+    opacity: 0.5;
+
     font-family: "General Sans";
     font-weight: 500;
-    
-    &:first-of-type{
+
+    &:first-of-type {
       opacity: 1;
     }
   }
 }
-.text4{
+
+.text4 {
   font-size: 64px;
 }
-.text5-block{
-  
-  .text5{
+
+.text5-block {
+
+  .text5 {
     font-size: 64px;
     margin-bottom: 80px;
   }
-  .text5-heading{
+
+  .text5-heading {
     margin-bottom: 40px;
     font-size: 32px;
   }
-  .text5-item{
+
+  .text5-item {
     margin-top: 20px;
-    color:rgba($black, 0.5);
+    color: rgba($black, 0.5);
     font-size: 24px;
     line-height: 32px;
   }
 }
-.text7{
+
+.text7 {
   font-size: 128px;
 }

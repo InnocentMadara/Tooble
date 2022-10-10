@@ -1,4 +1,4 @@
-input{
+input {
   border: 2px solid #FFFFFF40;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.05);
@@ -7,27 +7,30 @@ input{
   outline: 0;
   transition: border-color 0.3s, box-shadow 0.3s;
 
-  &::placeholder{
+  &::placeholder {
     color: rgba(255, 255, 255, 0.25);
     transition: opacity 0.3s;
   }
-  &:hover{
+
+  &:hover {
     border-color: #FFFFFF80;
   }
-  &:focus{
+
+  &:focus {
     border-color: $gold;
     box-shadow: 0 0 20px 0 rgba($gold, 0.25);
 
-    &::placeholder{
+    &::placeholder {
       opacity: 0;
     }
-    &:hover{
+
+    &:hover {
       cursor: text;
     }
   }
 }
 
-.submit-button{
+.submit-button {
   background: transparent;
   border: 0;
   width: 204px;
@@ -37,9 +40,9 @@ input{
   align-items: center;
   outline: 0;
 
-  &__inner{
+  &__inner {
     box-shadow: 0 0 0 10px rgba($gold, 0.05),
-    0 0 0 20px rgba($gold, 0.05);
+      0 0 0 20px rgba($gold, 0.05);
 
     display: flex;
     justify-content: center;
@@ -49,7 +52,7 @@ input{
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
-    
+
     cursor: pointer;
     background: $gold;
     width: 164px;
@@ -59,35 +62,60 @@ input{
 
     transition: all 0.3s;
   }
-  &[light] &__inner{
+
+  &[light] &__inner {
     box-shadow: 0 0 0 10px rgba($gold, 0.25),
-    0 0 0 20px rgba($gold, 0.25);
+      0 0 0 20px rgba($gold, 0.25);
   }
-  &:hover{
-    .submit-button__inner{
+
+  &:hover {
+    .submit-button__inner {
       width: 100%;
       height: 100%;
       box-shadow: 0 0 0 0 transparent;
     }
-    &:disabled .submit-button__inner{
+
+    &:disabled .submit-button__inner {
       width: 164px;
       height: 164px;
       box-shadow: 0 0 0 10px rgba($gold, 0.05),
-      0 0 0 20px rgba($gold, 0.05);
+        0 0 0 20px rgba($gold, 0.05);
     }
-    &[light]:disabled .submit-button__inner{
+
+    &[light]:disabled .submit-button__inner {
       box-shadow: 0 0 0 10px rgba($gold, 0.25),
-      0 0 0 20px rgba($gold, 0.25);
+        0 0 0 20px rgba($gold, 0.25);
     }
   }
-  &:focus{
-    .submit-button__inner{
+
+  &:focus {
+    .submit-button__inner {
       width: 100%;
       height: 100%;
       box-shadow: 0 0 0 10px rgba($gold, 0.05);
     }
   }
-  &:disabled{
+
+  &:disabled {
     opacity: 0.2;
+  }
+}
+
+button.button-regular {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  position: relative;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    background: $gold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
   }
 }

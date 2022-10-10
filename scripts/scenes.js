@@ -13,8 +13,21 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
 addAnimation('.header__logo', {filter: "invert(0%)"}, {filter: "invert(100%)"}, ".header-invert", 0, 1)
 addAnimation('.discount-menu__open-button', {color: "rgb(255, 255, 255)"}, {color: "rgb(16, 16, 16)"}, ".header-invert", 0, 1)
 
-addAnimation('.start', {opacity: 1, top: "50%"}, {opacity: 0, top: "45%"}, ".text-intro-end", 0.5, 1)
-// addAnimation('.start', {opacity: 0, top: "55%"}, {opacity: 1, top: "50%"}, ".text-intro-start", 0.5, 1)
+// addAnimation('.start', {top: "50%"}, {top: "35%"}, ".text-intro", 1, 1)
+
+
+// addAnimation('')
+new ScrollMagic.Scene({
+  duration: 0 * 1000,
+  triggerHook: 0
+})
+.setTween( new TimelineMax()
+  .fromTo('.video-start__content', 4, {opacity: 1, top: "50%"}, {opacity: 1, top: "50%"})
+  .fromTo('.video-start__content', 5, {opacity: 1, top: "50%"}, {opacity: 1, top: "35%"})
+  .fromTo('.video-start__element', 5, {transform: "translateY(-50%)"}, {transform: "translateY(0%)"}, "-=5")
+  .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
+  )
+.addTo(controller)
 
 addAnimation('.header', {opacity: 0}, {opacity: 1}, ".header-appearing", 0.5, 1)
 

@@ -1,0 +1,80 @@
+.privacy-policy {
+  background: $white;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+
+  &[active] {
+    transform: translateY(0%);
+  }
+
+  // .privacy-policy__header
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 26px 100px;
+  }
+
+  // .privacy-policy__back-button
+  &__back-button {
+    margin-right: 40px;
+    background: transparent;
+    border: 0;
+
+    img {
+      transform: rotate(-90deg);
+      filter: invert(1);
+    }
+  }
+
+  // .privacy-policy__name
+  &__name {
+    margin-right: auto;
+    font-family: 'General Sans';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 49px;
+  }
+
+  // .privacy-policy__close-button
+  &__close-button {
+    font-family: 'General Sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  // .privacy-policy__content
+  &__content {
+    padding: 120px 200px 200px 300px;
+  }
+
+  // .privacy-policy__text
+  &__text {
+    font-family: 'General Sans';
+    font-size: 32px;
+    line-height: 56px;
+    color: rgba($color: $black, $alpha: 0.85);
+
+    strong {
+      color: $black;
+      font-weight: 500;
+    }
+  }
+
+  // .privacy-policy__title
+  &__title {
+    font-family: 'General Sans';
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 86px;
+    margin-bottom: 60px;
+    margin-top: 120px;
+  }
+}

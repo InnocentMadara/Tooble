@@ -1,0 +1,32 @@
+.about {
+  min-height: 100vh;
+  color: $white;
+  padding: 100px 260px 230px;
+  background: black;
+
+  // .about__text-block
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .about__title
+  &__title {
+    font-family: 'General Sans';
+    font-weight: 500;
+    font-size: 128px;
+    line-height: 173px;
+    margin-bottom: 40px;
+  }
+
+  // .about__text
+  &__text {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 175%;
+    max-width: 780px;
+    align-self: flex-end;
+  }
+}

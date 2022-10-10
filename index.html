@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="icon" href="./images/favicon.png">
-    
+
     <link rel="stylesheet" href="./css/index.min.css">
     <link rel="stylesheet" href="./css/normalize.min.css">
     <title>Tooble</title>
@@ -17,12 +17,12 @@
         <img src="./images/logo.svg" alt="logo">
       </a>
       <div class="header__discount-menu discount-menu">
-        <button class="discount-menu__open-button">
+        <button class="discount-menu__open-button button-regular">
           Get Discount
         </button>
 
         <div class="discount-menu__content">
-          <button class="discount-menu__close-button">
+          <button class="discount-menu__close-button button-regular">
             Close
           </button>
           <div class="discount-menu__main-block">
@@ -33,33 +33,92 @@
               Submit a request and we will prepare
               a special discount for you when sales start
             </p>
-          <input type="text" class="discount-menu__input" placeholder="e-mail">
-          <button light class="discount-menu__submit-button submit-button">
-            <div class="submit-button__inner">
-              Get Discount
-            </div>
-          </button>
-        </div>
+            <input type="text" class="discount-menu__input" placeholder="e-mail">
+            <button light class="discount-menu__submit-button submit-button">
+              <div class="submit-button__inner">
+                Get Discount
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="fade-in"></div>
 
-      <div class="video-block video-start">
-        <video src="./video/start.mp4"></video>
-      </div>
-
-      <div class="video-block video-main">
-        <video src="./video/main.mp4"></video>
-      </div>
-
-        <div class="start appearing-block">
-          <img src="./images/logo-intro.svg" alt="" class="logo-start">
-          <p class="text-start">Simple & Smart Side Table<span class="gold">.</span></p>
-          <button class="get-discount">Get Discount</button>
+      <div class="video-start video-block">
+        <div class="video-start__content appearing-block">
+          <img class="video-start__logo" src="./images/logo-intro.svg" alt="">
+          <div class="video-start__text-block">
+            <p class="video-start__text">Simple & Smart Side Table<span class="gold">.</span></p>
+            <button class="video-start__get-discount button-regular">Get Discount</button>
+          </div>
         </div>
+        <video class="video-start__element" src="./video/start.mp4" autoplay muted></video>
+      </div>
 
+      <section class="about">
+        <div class="about__text-block">
+          <h2 class="about__title">
+            About<span class="gold">.</span>
+          </h2>
+          <p class="about__text">
+            The TOOBLE designed for your convenience and comfort. Charge your devices with a wireless charger or
+            through
+            USB ports with a clever cable management system. Use a foldable lamp for evening reading. Fine-tune it
+            to your
+            preference with djustable height legs and a configurable smart screen.
+          </p>
+        </div>
+      </section>
+
+      <div class="triggers">
+        <span data-time="0" class="header-appearing trigger"></span>
+
+        <span data-time="7" class="header-invert trigger"></span>
+
+        <span data-time="0" class="text1-start trigger"></span>
+        <span data-time="1" class="text1-end trigger"></span>
+
+        <span data-time="2" class="text2-start trigger"></span>
+        <span data-time="5" class="text2-end trigger"></span>
+
+        <span data-time="7" class="text3-start trigger"></span>
+        <span data-time="10" class="textlist-start trigger"></span>
+        <span data-time="23" class="text3-end trigger"></span>
+
+        <span data-time="11" class="textlist-item2 trigger"></span>
+        <span data-time="14" class="textlist-item3 trigger"></span>
+        <span data-time="16.5" class="textlist-item4 trigger"></span>
+        <span data-time="19.5" class="textlist-item6 trigger"></span>
+
+        <span data-time="24" class="text4-start trigger"></span>
+        <span data-time="28" class="text4-end trigger"></span>
+
+        <span data-time="29" class="text5-start trigger"></span>
+        <span data-time="35" class="text5-end trigger"></span>
+
+        <span data-time="36" class="text6-start trigger"></span>
+        <span data-time="38" class="text6-end trigger"></span>
+
+        <span data-time="40" class="text7-start trigger"></span>
+        <span data-time="44" class="text7-end trigger"></span>
+
+        <!-- <span data-time="45" class="text8-start trigger"></span>
+        <span data-time="48" class="text8-end trigger"></span> -->
+
+        <span data-time="46" class="text9-start trigger"></span>
+        <span data-time="48" class="text9-end trigger"></span>
+
+        <span data-time="50" class="text10-start trigger"></span>
+        <span data-time="53" class="text10-end trigger"></span>
+      </div>
+
+      <div class="video-main video-block">
+        <video class="video-main__element" src="./video/main.mp4"></video>
+      </div>
+
+      <div class="text-block">
         <p class="text1 appearing-block">Illuminate<span class="gold">.</span></p>
         <p class="text2 appearing-block">Folding built-in lamp<span class="gold">.</span></p>
 
@@ -92,59 +151,12 @@
         <div class="text8 appearing-block">Wireless charger<span class="gold">.</span></div>
         <div class="text9 appearing-block">2 USB ports, 1 Type-C<span class="gold">.</span></div>
         <div class="text10 appearing-block">Cable<br>management system<span class="gold">.</span></div>
-
-
-      <div class="triggers">
-
-        <span data-time="2" class="text-intro-start trigger"></span>
-        <span data-time="6" class="text-intro-end trigger"></span>
-        
-        <span data-time="8" class="header-appearing trigger"></span>
-        
-        <span data-time="10" class="video-main-trigger trigger"></span>
-        <span data-time="16.9" class="header-invert trigger"></span>
-        
-        <span data-time="10" class="text1-start trigger"></span>
-        <span data-time="11" class="text1-end trigger"></span>
-          
-        <span data-time="12" class="text2-start trigger"></span>
-        <span data-time="15" class="text2-end trigger"></span>
-        
-        <span data-time="17" class="text3-start trigger"></span>
-        <span data-time="20" class="textlist-start trigger"></span>
-        <span data-time="33" class="text3-end trigger"></span>
-        
-        <span data-time="21" class="textlist-item2 trigger"></span>
-        <span data-time="24" class="textlist-item3 trigger"></span>
-        <span data-time="26.5" class="textlist-item4 trigger"></span>
-        <span data-time="29.5" class="textlist-item6 trigger"></span>
-        
-        <span data-time="34" class="text4-start trigger"></span>
-        <span data-time="38" class="text4-end trigger"></span>
-        
-        <span data-time="39" class="text5-start trigger"></span>
-        <span data-time="45" class="text5-end trigger"></span>
-
-        <span data-time="46" class="text6-start trigger"></span>
-        <span data-time="48" class="text6-end trigger"></span>
-
-        <span data-time="50" class="text7-start trigger"></span>
-        <span data-time="54" class="text7-end trigger"></span>
-
-        <!-- <span data-time="45" class="text8-start trigger"></span>
-        <span data-time="48" class="text8-end trigger"></span> -->
-        
-        <span data-time="56" class="text9-start trigger"></span>
-        <span data-time="58" class="text9-end trigger"></span>
-        
-        <span data-time="60" class="text10-start trigger"></span>
-        <span data-time="63" class="text10-end trigger"></span>
       </div>
-        
+
       <div class="slider">
         <div class="slider__container swiper">
           <div class="slider__carousel swiper-wrapper">
-            
+
             <div class="slider__slide slide swiper-slide">
               <img class="slide__image" src="./images/living-room.jpg" alt="">
             </div>
@@ -220,7 +232,7 @@
           </li>
           <li class="footer__list-item">
             <img src="./images/footer-svg/drawer.svg" alt="" class="footer__list-img">
-            Drawer (10*10*2.5 in.) 
+            Drawer (10*10*2.5 in.)
           </li>
 
         </ul>
@@ -228,7 +240,7 @@
       <div class="footer__bottom-block">
         <p class="footer__copyright">© Tooble – Smart Table, 2022</p>
         <ul class="footer__terms-list">
-          <li class="footer__terms-item">Privacy Policy</li>
+          <li class="footer__terms-item footer__privacy-policy">Privacy Policy</li>
           <li class="footer__terms-item">Terms and Conditions</li>
         </ul>
         <button class="footer__arrow">
@@ -237,18 +249,108 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
-      integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"
-      integrity="sha512-6MCPs9fbSIt6mTpJH2Lbo9Kk71gcgwY85BCqJGP04x+O08W3m/OiKfMiMc4VQKYn+DCtAQwpGumWeD0cACeRsQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"
-      integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="privacy-policy">
+      <div class="privacy-policy__header">
+        <button class="privacy-policy__back-button">
+          <img src="./images/arrow.svg" alt="">
+        </button>
+        <h3 class="privacy-policy__name">Tooble Privacy Policy</h3>
+        <button class="privacy-policy__close-button button-regular">
+          Close
+        </button>
+      </div>
+      <div class="privacy-policy__content">
+        <p class="privacy-policy__text">
+          Privacy Policy describes how Tooble collects, uses, and shares your personal data.
+          <br><br>
+          In addition to this Privacy Policy, we provide data and privacy information embedded in our products and
+          certain features that ask to use your personal information. This product-specific information is accompanied
+          by our Data & Privacy Icon.
+        </p>
+        <h2 class="privacy-policy__title">
+          What Is Personal Data at Apple?
+        </h2>
+        <p class="privacy-policy__text">
+          At Apple, we believe strongly in fundamental privacy rights
+          — and that those fundamental rights should not differ depending on where you live in the world. That’s why we
+          treat any
+          data that relates to an identified or identifiable individual or that is linked
+          or linkable to them by Apple as “personal data,” no matter where the individual lives.
+          <br><br>
+          This means that data that directly identifies you — such as your name — is personal data, and also data that
+          does not
+          directly identify you, but that can reasonably be used to identify you
+          — such as the serial number of your device — is personal data. Aggregated data is considered non‑personal data
+          for the
+          purposes of this Privacy Policy.
+        </p>
+        <h2 class="privacy-policy__title">
+          Your Privacy Rights at Tooble
+        </h2>
+        <p class="privacy-policy__text">
+          At Apple, we respect your ability to know, access, correct, transfer, restrict the processing of, and delete
+          your
+          personal data.
+          <br><br>
+          We have provided these rights to our global customer base and if you choose to exercise these privacy rights,
+          you have
+          the right not to be treated in a discriminatory way nor to receive a lesser degree of service from Apple.
+          <br><br>
+          Apple does not sell your data including as “sale” is defined in Nevada and California.
+        </p>
+        <h2 class="privacy-policy__title">
+          Cookies and Other Technologies
+        </h2>
+        <p class="privacy-policy__text">
+          Apple’s websites, online services, interactive applications, and advertisements may use “cookies” and other
+          technologies such as web beacons. These technologies help us to better understand user behavior including for
+          security and fraud prevention purposes, tell us which parts of our websites people have visited, and
+          facilitate
+          and measure the effectiveness of advertisements and web searches.
+          <br><br>
+          <strong>Communications Cookies.</strong> These cookies are used to enable network traffic to and from Apple’s
+          systems, including
+          by helping us detect any errors.
+          <br><br>
+          <strong>Strictly Necessary Cookies.</strong> These cookies are set as required to provide a specific feature
+          or
+          service
+          that you
+          have accessed or requested. For example, they allow us to display our websites in the proper format and
+          language, to authenticate and verify your transactions, and to preserve the contents of your Bag when shopping
+          online at apple.com.
+          <br><br>
+          <strong>Other Cookies.</strong> These cookies are used to understand how visitors interact with our websites
+          and
+          online
+          services,
+          including by helping us to assess the effectiveness of advertisements and web searches. Apple also uses these
+          cookies to remember choices you make while browsing, so we can provide you with a customized experience.
+          <br><br>
+          If you prefer that Apple not use cookies, we provide you with the means to disable their use. If you want to
+          disable cookies and you’re using the Safari web browser, choose “Block all cookies” in Safari’s privacy
+          settings. If you are using a different browser, check with your provider to find out how to disable cookies.
+          Certain features of the Apple website may not be available if all cookies are disabled.
+          <br><br>
+          In addition to cookies, Apple uses other technologies that help us achieve similar objectives.
+          <br><br>
+          In some email messages Apple sends to you, we provide a “click-through URL” that links you to content on the
+          Apple website. When you click one of these URLs, they pass through a separate server before arriving at the
+          destination page on our website. We track this click-through to help us determine interest in particular
+          topics
+          and measure whether we are communicating with you effectively. If you prefer not to be tracked in this way,
+          you
+          should not click graphic or text links in email messages.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/scenes.js"></script>
     <script src="./scripts/menu.js"></script>
