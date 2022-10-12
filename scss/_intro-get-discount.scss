@@ -1,0 +1,43 @@
+.intro-get-discount {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 100;
+  max-width: 780px;
+  padding-left: 100px;
+  margin-right: 200px;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-100%, -50%);
+  transition: transform 0.3s;
+  
+  &[active]{
+    transform: translate(0%, -50%);
+  }
+
+  // .intro-get-discount__title
+  &__title {
+    color: $white;
+    font-family: 'General Sans';
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 86px;
+    max-width: 590px;
+    margin-bottom: 80px;
+  }
+
+  // .intro-get-discount__input
+  &__input {
+    padding: 25px 40px;
+    font-family: 'General Sans';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  // .intro-get-discount__button
+  &__button {
+  }
+}

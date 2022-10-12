@@ -8,19 +8,6 @@ div.start {
   width: 100%;
 }
 
-.text {
-  z-index: 15;
-}
-
-.logo-start {
-  margin-bottom: 44px;
-}
-
-.text-start {
-  margin-bottom: 44px;
-  font-size: 32px;
-}
-
 .get-discount {
   background: transparent;
   outline: 0;
@@ -54,6 +41,7 @@ div.start {
   width: 100%;
 }
 
+
 .appearing-block {
   pointer-events: none;
   opacity: 0;
@@ -78,6 +66,19 @@ div.start {
   color: $black;
 }
 
+.text-item-circle{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: $gold;
+  border-radius: 100px;
+  filter: grayscale(100%);
+}
+
 .text1 {
   font-size: 128px;
 }
@@ -98,6 +99,8 @@ div.start {
   opacity: 0;
 
   .text3-item {
+    position: relative;
+    padding-left: 64px;
     margin-top: 20px;
     font-size: 24px;
     line-height: 32px;

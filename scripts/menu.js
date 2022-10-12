@@ -24,3 +24,13 @@ privacyBlock.addEventListener("click", e => {
   privacyBlock.removeAttribute('active');
   document.body.style.overflow = 'auto';
 })
+
+
+const introGetDiscount = document.querySelector('.video-start__get-discount');
+const introBlock = document.querySelector('.intro-get-discount');
+const startContent = document.querySelector('.video-start__content');
+
+introGetDiscount.addEventListener("click", e => {
+  introBlock.setAttribute("active", "");
+  startContent.setAttribute("hidden", "");
+})

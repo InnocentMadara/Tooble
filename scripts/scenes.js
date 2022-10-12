@@ -23,7 +23,7 @@ new ScrollMagic.Scene({
 })
 .setTween( new TimelineMax()
   .fromTo('.video-start__content', 4, {opacity: 1, top: "50%"}, {opacity: 1, top: "50%"})
-  .fromTo('.video-start__content', 5, {opacity: 1, top: "50%"}, {opacity: 1, top: "35%"})
+  .fromTo('.video-start__content', 5, {pointerEvents: "none", opacity: 1, top: "50%"}, {pointerEvents: "auto", opacity: 1, top: "35%"})
   .fromTo('.video-start__element', 5, {transform: "translateY(-50%)"}, {transform: "translateY(0%)"}, "-=5")
   .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
   )
@@ -44,18 +44,26 @@ addAnimation('.text3-block', {opacity: 0, top: "67%"}, {opacity: 1, top: "62%"},
 
 
 addAnimation('.text3-item4', {opacity: 1}, {opacity: 0.5}, ".textlist-item6", 0.5, 1)
-addAnimation('.text3-item5', {opacity: 1}, {opacity: 0.5}, ".textlist-item6", 0.5, 1)
+addAnimation('.text3-item-circle4', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".textlist-item6", 0.5, 1)
+// addAnimation('.text3-item5', {opacity: 1}, {opacity: 0.5}, ".textlist-item6", 0.5, 1)
 addAnimation('.text3-item6', {opacity: 0.5}, {opacity: 1}, ".textlist-item6", 0.5, 1)
+addAnimation('.text3-item-circle6', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".textlist-item6", 0.5, 1)
 
 addAnimation('.text3-item3', {opacity: 1}, {opacity: 0.5}, ".textlist-item4", 0.5, 1)
+addAnimation('.text3-item-circle3', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".textlist-item4", 0.5, 1)
 addAnimation('.text3-item4', {opacity: 0.5}, {opacity: 1}, ".textlist-item4", 0.5, 1)
-addAnimation('.text3-item5', {opacity: 0.5}, {opacity: 1}, ".textlist-item4", 0.5, 1)
+addAnimation('.text3-item-circle4', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".textlist-item4", 0.5, 1)
+// addAnimation('.text3-item5', {opacity: 0.5}, {opacity: 1}, ".textlist-item4", 0.5, 1)
 
 addAnimation('.text3-item2', {opacity: 1}, {opacity: 0.5}, ".textlist-item3", 0.5, 1)
+addAnimation('.text3-item-circle2', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".textlist-item3", 0.5, 1)
 addAnimation('.text3-item3', {opacity: 0.5}, {opacity: 1}, ".textlist-item3", 0.5, 1)
+addAnimation('.text3-item-circle3', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".textlist-item3", 0.5, 1)
 
 addAnimation('.text3-item1', {opacity: 1}, {opacity: 0.5}, ".textlist-item2", 0.5, 1)
+addAnimation('.text3-item-circle1', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".textlist-item2", 0.5, 1)
 addAnimation('.text3-item2', {opacity: 0.5}, {opacity: 1}, ".textlist-item2", 0.5, 1)
+addAnimation('.text3-item-circle2', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".textlist-item2", 0.5, 1)
 
 
 addAnimation('.text-list', {opacity: 0}, {opacity: 1}, ".textlist-start", 0.5, 1)
