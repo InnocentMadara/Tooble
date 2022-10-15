@@ -40,3 +40,7 @@ function setVideoFrame() {
 document.querySelectorAll('.trigger').forEach(trigger => {
   trigger.style.top = trigger.dataset.time * scrollSensivity * 1000 + 'px';
 })
+
+document.querySelector('.footer__arrow-img').addEventListener("click", e => {
+  window.scrollTo({top: 0, behavior: "smooth"});
+})

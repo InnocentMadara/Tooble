@@ -89,6 +89,14 @@
     width: 100%;
     object-fit: cover;
     display: block;
+    object-position: 50% 50%;
+    
+    @include mq(1024){
+      object-position: 15% 50%;
+    };
+    @include mq(600){
+      object-position: 40% 50%;
+    };
   }
 }
 

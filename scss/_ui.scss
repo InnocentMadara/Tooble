@@ -1,5 +1,5 @@
 input {
-  border: 2px solid #FFFFFF40;
+  border: 2px solid rgb(64, 64, 64);;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.05);
   color: $white;
@@ -8,12 +8,12 @@ input {
   transition: border-color 0.3s, box-shadow 0.3s;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.25);
+    color: rgb(64, 64, 64);
     transition: opacity 0.3s;
   }
 
   &:hover {
-    border-color: #FFFFFF80;
+    border-color: rgb(128, 128, 128);
   }
 
   &:focus {

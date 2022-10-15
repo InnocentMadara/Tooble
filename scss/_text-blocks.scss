@@ -1,11 +1,53 @@
-div.start {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+// div.start {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+//   position: fixed;
+//   left: 0;
+//   width: 100%;
+// }
+
+.appearing-block {
+  pointer-events: none;
+  opacity: 0;
+  font-family: "General Sans";
+  font-weight: 500;
   position: fixed;
-  left: 0;
-  width: 100%;
+  z-index: 12;
+  left: 100px;
+  color: $white;
+  transform: translateY(-50%);
+  max-width: 80vw;
+
+  @include mq(1024){
+    left: 40px;
+    transform: translateY(0%);
+  };
+}
+
+
+.title-large{
+  font-size: 128px;
+  line-height: 135%;
+  
+  @include mq(1024){
+    font-size: 96px;
+  };
+  @include mq(600){
+    font-size: 48px;
+  };
+}
+.title-normal{
+  font-size: 64px;
+  line-height: 135%;
+  
+  @include mq(1024){
+    font-size: 48px;
+  };
+  @include mq(600){
+    font-size: 36px;
+  };
 }
 
 .get-discount {
@@ -32,29 +74,6 @@ div.start {
     height: 2px;
   }
 }
-
-
-.text3-block {
-  position: fixed;
-  transform: translateY(-50%);
-  left: 100px;
-  width: 100%;
-}
-
-
-.appearing-block {
-  pointer-events: none;
-  opacity: 0;
-  font-family: "General Sans";
-  font-weight: 500;
-  position: fixed;
-  z-index: 12;
-  font-size: 64px;
-  left: 100px;
-  color: $white;
-  transform: translateY(-50%);
-}
-
 .text3,
 .text4,
 .text5-block,
@@ -80,15 +99,12 @@ div.start {
 }
 
 .text1 {
-  font-size: 128px;
 }
 
 .text2 {
-  font-size: 64px;
 }
 
 .text3 {
-  font-size: 64px;
   opacity: 1;
   transform: translateY(0%);
   position: static;
@@ -110,20 +126,21 @@ div.start {
     font-family: "General Sans";
     font-weight: 500;
 
-    &:first-of-type {
-      opacity: 1;
-    }
+    @include mq(1024){
+      font-size: 20px;
+    };
+    @include mq(600){
+      font-size: 16px;
+    };
   }
 }
 
 .text4 {
-  font-size: 64px;
 }
 
 .text5-block {
 
   .text5 {
-    font-size: 64px;
     margin-bottom: 80px;
   }
 
@@ -134,12 +151,18 @@ div.start {
 
   .text5-item {
     margin-top: 20px;
-    color: rgba($black, 0.5);
+    color: rgba($black, 1);
     font-size: 24px;
     line-height: 32px;
+
+    @include mq(1024){
+      font-size: 20px;
+    };
+    @include mq(600){
+      font-size: 16px;
+    };
   }
 }
 
 .text7 {
-  font-size: 128px;
 }

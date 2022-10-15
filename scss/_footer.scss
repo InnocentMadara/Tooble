@@ -234,6 +234,8 @@
     border: 0;
     outline: 0;
 
+    cursor: pointer;
+
     @include mq(1024) {
       position: absolute;
       right: 26px;

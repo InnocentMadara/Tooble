@@ -9,10 +9,8 @@
   align-items: center;
 
   @include mq(600) {
-    padding: 28px 20px;
+    padding: 20px;
   }
-
-  ;
 
   // .header__logo
   &__logo {
@@ -41,6 +39,7 @@
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 0.15s;
+    max-width: 100%;
   }
 
   .discount-menu--active &__content {
@@ -55,14 +54,24 @@
     color: $black;
     font-family: "General Sans";
     font-weight: 500;
+    @include mq(600){
+      margin: 20px;
+    };
   }
 
   &__main-block {
-    margin: 0 162px 30px;
+    padding: 0 150px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 640px;
+    max-width: 944px;
+    @include mq(1440){
+      padding: 0 38px 25px;
+      width: min(694px, 100vw);
+    };
+    @include mq(600){
+      align-items: flex-start;
+    };
   }
 
   &__title {
@@ -71,13 +80,36 @@
     font-size: 96px;
     line-height: 130px;
     margin-bottom: 40px;
+    @include mq(1440){
+      font-size: 64px;
+      line-height: 86px;
+      margin-bottom: 30px;
+    };
+    @include mq(600){
+      font-size: 36px;
+      line-height: 49px;
+      margin-bottom: 10px;
+    };
   }
 
   &__text {
+    text-align: center;
     font-family: "General Sans";
     font-size: 32px;
     line-height: 48px;
     margin-bottom: 60px;
+    @include mq(1440){
+      font-size: 24px;
+      line-height: 42px;
+      margin-bottom: 30px;
+      max-width: 455px;
+    };
+    @include mq(600){
+      font-size: 18px;
+      line-height: 36px;
+      margin-bottom: 20px;
+      text-align: left;
+    };
   }
 
   &__input {
@@ -85,16 +117,21 @@
     align-self: stretch;
     font-size: 32px;
     line-height: 43px;
-    border: 2px solid $gold;
     border-radius: 6px;
     margin-bottom: 60px;
     padding: 24px 40px;
     color: $black;
-    outline-color: rgba($color: $gold, $alpha: 0.8);
 
-    &:focus::placeholder {
-      opacity: 0;
-    }
+    @include mq(1440){
+      margin-bottom: 20px;
+      width: 100%;
+    };
+    @include mq(600){
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 20px;
+    };
   }
 
 
