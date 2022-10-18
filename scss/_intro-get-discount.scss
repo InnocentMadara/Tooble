@@ -1,15 +1,16 @@
 .intro-get-discount {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 150px;
   z-index: 100;
   max-width: 780px;
   padding-left: 100px;
   margin-right: 200px;
   display: flex;
   flex-direction: column;
-  transform: translate(-100%, -50%);
+  transform: translateX(-100%);
   transition: transform 0.3s;
+
 
   @include mq(1024){
     padding-left: 80px;
@@ -19,7 +20,7 @@
   };
   
   &[active]{
-    transform: translate(0%, -50%);
+    transform: translateX(0%);
   }
 
   // .intro-get-discount__title

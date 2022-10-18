@@ -31,7 +31,7 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
 
   
 
-  window.onload = () => {
+window.onload = () => {
 
 
 
