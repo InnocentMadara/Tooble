@@ -31,12 +31,12 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
 
   
 
-window.onload = () => {
+window.addEventListener("load", () => {
 
 
 
-  addAnimation('.header__logo', {filter: "invert(0%)"}, {filter: "invert(100%)"}, ".header-invert", 0, 1)
-  addAnimation('.discount-menu__open-button', {color: "rgb(255, 255, 255)"}, {color: "rgb(16, 16, 16)"}, ".header-invert", 0, 1)
+  // addAnimation('.header__logo', {filter: "invert(0%)"}, {filter: "invert(100%)"}, ".header-invert", 0, 1)
+  // addAnimation('.discount-menu__open-button', {color: "rgb(255, 255, 255)"}, {color: "rgb(16, 16, 16)"}, ".header-invert", 0, 1)
   
   // addAnimation('.start', {top: "50%"}, {top: "35%"}, ".text-intro", 1, 1)
   
@@ -53,8 +53,6 @@ new ScrollMagic.Scene({
   .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
   )
 .addTo(controller)
-
-// addAnimation('.video-main__element', {objectPosition: "30% 50%"}, {objectPosition: "55% 50%"}, ".text7-start", 0.1, 0.1)
 
 addAnimation('.header', {opacity: 0}, {opacity: 1}, ".header-appearing", 0.5, 1)
 
@@ -128,4 +126,4 @@ addAnimation('.text9', {opacity: 0, top: topPosition}, {opacity: 1, top: centerP
 
 addAnimation('.text10', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text10-end", 0.5, 1)
 addAnimation('.text10', {opacity: 0, top: topPosition}, {opacity: 1, top: centerPosition}, ".text10-start", 0.5, 1)
-}
+});

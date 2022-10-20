@@ -22,16 +22,25 @@ let accelAmount = 0.1;
 let delay = 0
 
 let footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
+let videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
+
 window.addEventListener('resize', function (e) {
   footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
+  videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
+});
+window.addEventListener('load', function (e) {
+  footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
+  videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
 });
 
 scene.on("update", e => {
   scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
 
-  console.log(e.scrollPos, footerTopDistance);
-
   if(e.scrollPos > footerTopDistance){
+    document.querySelector('.header__logo').style.filter = "invert(0%)";
+    document.querySelector('.discount-menu__open-button').style.color = "rgb(255, 255, 255)";
+  }
+  else if(e.scrollPos < videoLightBG){
     document.querySelector('.header__logo').style.filter = "invert(0%)";
     document.querySelector('.discount-menu__open-button').style.color = "rgb(255, 255, 255)";
   }
