@@ -114,7 +114,6 @@ addAnimation('.text5-item2', {opacity: 0.5}, {opacity: 1}, ".text5list-item2", 0
 addAnimation('.text5-item-circle2', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text5list-item2", 0.5, 1)
 
 
-
 addAnimation('.text6', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text6-end", 0.5, 1)
 addAnimation('.text6', {opacity: 0, top: topPosition}, {opacity: 1, top: centerPosition}, ".text6-start", 0.5, 1)
 
