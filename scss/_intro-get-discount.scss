@@ -1,7 +1,7 @@
 .intro-get-discount {
   position: absolute;
   left: 0;
-  top: 150px;
+  top: 100px;
   z-index: 100;
   max-width: 780px;
   padding-left: 100px;
@@ -64,7 +64,18 @@
     };
   }
 
-  // .intro-get-discount__button
-  &__button {
+  // .intro-get-discount__submit-button
+  &__submit-button {
+
+  }
+
+  // .intro-get-discount__close-button
+  &__close-button {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: 'General Sans';
+    font-weight: 500;
+    color: $white;
+    align-self: start;
   }
 }

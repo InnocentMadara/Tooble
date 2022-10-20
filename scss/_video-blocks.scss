@@ -12,10 +12,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: transform 0.3s;
     &[unactive]{
-      opacity: 0;
-      pointer-events: none;
+      transform: translate(-250%, -50%);
     }
     
     @include mq(600){
@@ -26,12 +25,44 @@
   // .video-start__logo
   &__logo {
     margin-bottom: 44px;
+
+    &[filled] .video-start__svg-outer{
+      opacity: 0;
+    }
+    &[filled] .video-start__svg-inner{
+      opacity: 1;
+    }
+    
     @include mq(1024){
       max-width: 460px;
     };
     @include mq(600){
       max-width: min(320px, 90vw);
     };
+  }
+
+  &__svg-outer{
+    transition: opacity 1s;
+    width: 100%;
+    &:active path{
+      fill: white;
+      stroke: none;
+    }
+    path{
+      transition: 0.2s;
+      fill: none;
+      stroke: white;
+      stroke-width: 2px;
+      stroke-linejoin: round
+    }
+  }
+  &__svg-inner{
+    transition: opacity 1s;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    left: 0;
+    width: 100%;
   }
 
   // .video-start__text-block

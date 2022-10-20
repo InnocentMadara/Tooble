@@ -7,6 +7,7 @@ input {
   outline: 0;
   transition: border-color 0.3s, box-shadow 0.3s;
 
+  
   &::placeholder {
     color: rgb(64, 64, 64);
     transition: opacity 0.3s;
@@ -23,10 +24,18 @@ input {
     &::placeholder {
       opacity: 0;
     }
-
+    
     &:hover {
       cursor: text;
     }
+  }
+  &[valid="true"]{
+    border-color: $green;
+    box-shadow: 0 0 20px 0 rgba($green, 0.25);
+  }
+  &[valid="false"]{
+    border-color: $red;
+    box-shadow: 0 0 20px 0 rgba($red, 0.25);
   }
 }
 
@@ -39,6 +48,11 @@ input {
   justify-content: center;
   align-items: center;
   outline: 0;
+
+  &:disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
 
   &__inner {
     box-shadow: 0 0 0 10px rgba($gold, 0.05),
@@ -74,18 +88,6 @@ input {
       height: 100%;
       box-shadow: 0 0 0 0 transparent;
     }
-
-    &:disabled .submit-button__inner {
-      width: 164px;
-      height: 164px;
-      box-shadow: 0 0 0 10px rgba($gold, 0.05),
-        0 0 0 20px rgba($gold, 0.05);
-    }
-
-    &[light]:disabled .submit-button__inner {
-      box-shadow: 0 0 0 10px rgba($gold, 0.25),
-        0 0 0 20px rgba($gold, 0.25);
-    }
   }
 
   &:focus {
@@ -95,9 +97,12 @@ input {
       box-shadow: 0 0 0 10px rgba($gold, 0.05);
     }
   }
-
-  &:disabled {
-    opacity: 0.2;
+  &[sent].submit-button .submit-button__inner{
+    background: $green;
+    width: 204px;
+    height: 204px;
+    opacity: 1;
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 

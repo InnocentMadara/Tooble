@@ -21,8 +21,24 @@ let scrollPosition = 0;
 let accelAmount = 0.1;
 let delay = 0
 
+let footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
+window.addEventListener('resize', function (e) {
+  footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
+});
+
 scene.on("update", e => {
   scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
+
+  console.log(e.scrollPos, footerTopDistance);
+
+  if(e.scrollPos > footerTopDistance){
+    document.querySelector('.header__logo').style.filter = "invert(0%)";
+    document.querySelector('.discount-menu__open-button').style.color = "rgb(255, 255, 255)";
+  }
+  else{
+    document.querySelector('.header__logo').style.filter = "invert(100%)";
+    document.querySelector('.discount-menu__open-button').style.color = "rgb(16, 16, 16)";
+  }
 })
 
 requestAnimationFrame(setVideoFrame);

@@ -14,3 +14,7 @@ const swiper = new Swiper('.swiper', {
 Array.from(swiper.pagination.bullets).forEach((bullet, index) => {
   bullet.textContent = paginationContent[index];
 })
+
+// document.querySelector('.slider').addEventListener("mousemove", e => {
+//   console.log(e);
+// })
