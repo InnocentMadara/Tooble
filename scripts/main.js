@@ -36,6 +36,7 @@ window.addEventListener('load', function (e) {
 scene.on("update", e => {
   scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
 
+  
   if(e.scrollPos > footerTopDistance){
     document.querySelector('.header__logo').style.filter = "invert(0%)";
     document.querySelector('.discount-menu__open-button').style.color = "rgb(255, 255, 255)";
