@@ -15,6 +15,28 @@ Array.from(swiper.pagination.bullets).forEach((bullet, index) => {
   bullet.textContent = paginationContent[index];
 })
 
-// document.querySelector('.slider').addEventListener("mousemove", e => {
-//   console.log(e);
-// })
+const cursor = document.querySelector('.slider__cursor');
+const slider = document.querySelector('.slider');
+
+slider.addEventListener("mousemove", e => {
+  x = e.clientX;
+  y = e.clientY - slider.getBoundingClientRect().top;
+  // cursor.style.transform = `translate(${x}px, ${y}px)`;
+
+  cursor.style.left = x + 'px';
+  cursor.style.top = y - 25 + 'px';
+
+  if(e.target.closest(".slider__pagination")){
+    cursor.setAttribute("unactive", "");
+  }
+  else{
+    cursor.removeAttribute("unactive");
+  }
+});
+
+slider.addEventListener("mouseover", e => {
+  cursor.removeAttribute("unactive");
+})
+slider.addEventListener("mouseout", e => {
+  cursor.setAttribute("unactive", "");
+})

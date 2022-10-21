@@ -28,9 +28,10 @@ window.addEventListener('resize', function (e) {
   footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
   videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
 });
-window.addEventListener('load', function (e) {
+document.addEventListener('load', function (e) {
   footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
   videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
+  console.log("ok");
 });
 
 scene.on("update", e => {

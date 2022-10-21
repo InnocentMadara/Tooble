@@ -93,6 +93,7 @@
     display: inline-flex;
   }
 
+  // .slider__bullet
   &__bullet {
     padding: 10px 0;
     font-size: 32px;
@@ -130,6 +131,38 @@
     }
 
     ;
+  }
+
+  //.slider__cursor
+  &__cursor{
+    width: 180px;
+    height: 180px;
+    border: 3px solid $white;
+    border-radius: 1000px;
+    position: absolute;
+    top: 0;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    overflow: hidden;
+
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "General Sans";
+    color: $white;
+
+    transition: width 0.3s, height 0.3s, 0.3s opacity 0s;
+
+
+    &[unactive]{
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
   }
 }
 
