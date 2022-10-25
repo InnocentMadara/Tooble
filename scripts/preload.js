@@ -4,7 +4,7 @@ const preloadBlock = document.querySelector('.preload');
 const logo = document.querySelector('.preload__svg-wrapper');
 let percent = 0;
 
-// let mediaElements = Array.from(document.querySelectorAll('img, video'));
+let mediaElements = Array.from(document.querySelectorAll('img, video'));
 
 document.addEventListener('DOMContentLoaded', function (e) {
   let itemsLoaded = 0;

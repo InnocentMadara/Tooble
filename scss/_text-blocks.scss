@@ -175,16 +175,41 @@
 
     .line{
       position: absolute;
-      bottom: 15px;
+      bottom: 14px;
       left: 100%;
+
+      width: 1000px;
+      height: 400px;
+
+
+      display: flex;
+
+      &-left{
+        height: 80%;
+        align-self: flex-end;
+        flex: 0 1 100%;
+        border-bottom: 2px solid #BBBBBB;
+        border-right: 2px solid #BBBBBB;
+        border-bottom-right-radius: 12px;
+      }
+      
+      &-right{
+        height: 80%;
+        align-self: flex-start;
+        flex: 0 0 50%;
+        border-top: 2px solid #BBBBBB;
+        border-left: 2px solid #BBBBBB;
+        border-top-left-radius: 12px;
+        transform: translateX(-2px);
+      }
 
       &-end{
         position: fixed;
         top: 100%;
         left: 10%;
-        width: 100px;
-        height: 100px;
-        background: white;
+        width: 8px;
+        height: 8px;
+        background: red;
       }
     }
   }
