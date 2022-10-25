@@ -145,6 +145,12 @@
     margin-bottom: 80px;
   }
 
+  .text5-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .text5-heading {
     margin-bottom: 40px;
     font-size: 32px;
@@ -153,6 +159,7 @@
   .text5-item {
     position: relative;
     padding-left: 64px;
+    display: inline-flex;
 
     margin-top: 20px;
     color: rgba($black, 1);
@@ -165,6 +172,21 @@
     @include mq(600){
       font-size: 16px;
     };
+
+    .line{
+      position: absolute;
+      bottom: 15px;
+      left: 100%;
+
+      &-end{
+        position: fixed;
+        top: 100%;
+        left: 10%;
+        width: 100px;
+        height: 100px;
+        background: white;
+      }
+    }
   }
 }
 

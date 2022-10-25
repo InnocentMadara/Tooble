@@ -41,7 +41,6 @@ window.addEventListener("load", () => {
   // addAnimation('.start', {top: "50%"}, {top: "35%"}, ".text-intro", 1, 1)
   
   
-// addAnimation('')
 new ScrollMagic.Scene({
   duration: 0 * 1000,
   triggerHook: 0

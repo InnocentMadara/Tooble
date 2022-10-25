@@ -25,12 +25,10 @@
   // .video-start__logo
   &__logo {
     margin-bottom: 44px;
+    position: relative;
 
-    &[filled] .video-start__svg-outer{
-      opacity: 0;
-    }
-    &[filled] .video-start__svg-inner{
-      opacity: 1;
+    &[filled] .video-start__svg-wrapper{
+      height: 100%;
     }
     
     @include mq(1024){
@@ -40,16 +38,24 @@
       max-width: min(320px, 90vw);
     };
   }
-
+  
+  &__svg-wrapper{
+    transition: height 0.5s;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+  }
+  
   &__svg-outer{
-    transition: opacity 1s;
     width: 100%;
-    &:active path{
-      fill: white;
-      stroke: none;
-    }
+    display: block;
+    
     path{
-      transition: 0.2s;
       fill: none;
       stroke: white;
       stroke-width: 2px;
@@ -57,12 +63,10 @@
     }
   }
   &__svg-inner{
-    transition: opacity 1s;
     position: absolute;
-    opacity: 0;
-    z-index: 10;
-    left: 0;
+    bottom: 0;
     width: 100%;
+    display: block;
   }
 
   // .video-start__text-block

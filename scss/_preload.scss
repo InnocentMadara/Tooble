@@ -1,0 +1,75 @@
+.preload{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.3s;
+ 
+  &__logo {
+    top: calc(50% - 128px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(1024){
+      width: 460px;
+      top: calc(50% - 108px)
+    };
+    @include mq(600){
+      top: calc(50% - 95px);
+      margin-top: 20%;
+      max-width: min(320px,90vw);
+    };
+  }
+  
+  &__svg-wrapper{
+    transition: height 0.5s;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 0%;
+    svg{
+      height: auto;
+    }
+  }
+  
+  &__svg-outer{
+    display: block;
+    height: 100%;
+    
+    @include mq(1024){
+      max-width: 100%;
+    };
+
+
+    &:active path{
+      fill: white;
+      stroke: none;
+    }
+    path{
+      transition: 0.2s;
+      fill: none;
+      stroke: white;
+      stroke-width: 2px;
+      stroke-linejoin: round
+    }
+  }
+  &__svg-inner{
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+  }
+  
+}

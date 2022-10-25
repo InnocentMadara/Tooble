@@ -21,7 +21,6 @@ const slider = document.querySelector('.slider');
 slider.addEventListener("mousemove", e => {
   x = e.clientX;
   y = e.clientY - slider.getBoundingClientRect().top;
-  // cursor.style.transform = `translate(${x}px, ${y}px)`;
 
   cursor.style.left = x + 'px';
   cursor.style.top = y - 25 + 'px';
@@ -38,5 +37,8 @@ slider.addEventListener("mouseover", e => {
   cursor.removeAttribute("unactive");
 })
 slider.addEventListener("mouseout", e => {
+  cursor.setAttribute("unactive", "");
+})
+slider.addEventListener("", e => {
   cursor.setAttribute("unactive", "");
 })
