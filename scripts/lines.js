@@ -16,6 +16,7 @@ window.addEventListener('resize', function (e) {
   // height = height.map((item) => {
   //   return (item - 40) + window.innerHeight * 0.05;
   // })
+  
   console.log(height);
   renderLines();
 });
