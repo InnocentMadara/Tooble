@@ -196,20 +196,11 @@
       &-right{
         height: 80%;
         align-self: flex-start;
-        flex: 0 0 50%;
+        flex: 0 0 20%;
         border-top: 2px solid #BBBBBB;
         border-left: 2px solid #BBBBBB;
         border-top-left-radius: 12px;
         transform: translateX(-2px);
-      }
-
-      &-end{
-        position: fixed;
-        top: 100%;
-        left: 10%;
-        width: 8px;
-        height: 8px;
-        background: red;
       }
     }
   }
