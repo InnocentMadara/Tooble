@@ -59,8 +59,8 @@
       margin-bottom: 30px;
     };
     @include mq(600){
-      margin-bottom: 20px;
       max-width: 85vw;
+      margin-bottom: 20px;
     };
   }
 
