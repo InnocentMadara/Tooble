@@ -48,6 +48,10 @@ input {
   justify-content: center;
   align-items: center;
   outline: 0;
+  
+  &:visited, &:active{
+    color: inherit;
+  }
 
   &:disabled{
     pointer-events: none;

@@ -60,7 +60,7 @@
     };
     @include mq(600){
       margin-bottom: 20px;
-      max-width: 90vw;
+      max-width: 85vw;
     };
   }
 
@@ -72,10 +72,10 @@
   // .intro-get-discount__close-button
   &__close-button {
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 18px;
     font-family: 'General Sans';
     font-weight: 500;
-    color: $white;
+    color: rgba(255, 255, 255, 0.75);
     align-self: start;
   }
 }

@@ -28,7 +28,7 @@ privacyBlock.addEventListener("click", e => {
 
 const introGetDiscount = document.querySelector('.video-start__get-discount');
 const introBlock = document.querySelector('.intro-get-discount');
-const startContent = document.querySelector('.video-start__content');
+const startContent = document.querySelector('.video-start__content-wrapper');
 const introClose = document.querySelector('.intro-get-discount__close-button');
 
 introGetDiscount.addEventListener("click", e => {

@@ -89,6 +89,9 @@ addAnimation('.text3-item-circle1', {filter: "grayscale(0%)", width: "24px", hei
 addAnimation('.text3-item2', {opacity: 0.5}, {opacity: 1}, ".text3list-item2", 0.5, 1)
 addAnimation('.text3-item-circle2', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item2", 0.5, 1)
 
+addAnimation('.text3-item1', {opacity: 0.5}, {opacity: 1}, ".text3list-item1", 0.5, 1)
+addAnimation('.text3-item-circle1', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item1", 0.5, 1)
+
 
 addAnimation('.text-list', {opacity: 0}, {opacity: 1}, ".textlist-start", 0.5, 1)
 
@@ -99,6 +102,12 @@ addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top
 addAnimation('.text5-block', {top: (parseInt(topPosition)+7)+"%" }, {top: centerPosition}, ".text5list-start", 1, 1)
 addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
 addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, {opacity: 1, top: (parseInt(topPosition)+7)+"%"}, ".text5-start", 0.5, 1)
+
+// window.addEventListener("resize", () => {
+  if(window.innerWidth <= 1024){
+    addAnimation('.text5-title', {opacity: 1}, {opacity: 0}, ".text5list-start", 1, 1)
+  }
+// })
 
 addAnimation('.text5-item3', {opacity: 1}, {opacity: 0.5}, ".text5list-item4", 0.5, 1)
 
@@ -124,4 +133,5 @@ addAnimation('.text9', {opacity: 0, top: topPosition}, {opacity: 1, top: centerP
 
 addAnimation('.text10', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text10-end", 0.5, 1)
 addAnimation('.text10', {opacity: 0, top: topPosition}, {opacity: 1, top: centerPosition}, ".text10-start", 0.5, 1)
+
 });

@@ -3,6 +3,15 @@
   z-index: 11;
   background: black;
 
+  // .video-start__content-wrapper
+  &__content-wrapper{
+    transition: opacity 0.3s;
+    &[unactive]{
+      opacity: 0;
+      // transform: translate(-250%, -50%);
+    }
+  }
+
   // .video-start__content
   &__content {
     position: absolute;
@@ -13,9 +22,8 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: transform 0.3s;
-    &[unactive]{
-      transform: translate(-250%, -50%);
-    }
+    opacity: 1;
+
     
     @include mq(600){
       margin-top: 20%;
