@@ -67,17 +67,23 @@ addAnimation('.text3-list', {opacity: 0}, {opacity: 1}, ".text3list-start", 1, 1
 addAnimation('.text3-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, {opacity: 1, top: (parseInt(topPosition)+7)+"%"}, ".text3-start", 0.5, 1)
 
 
-addAnimation('.text3-item4', {opacity: 1}, {opacity: 0.5}, ".text3list-item6", 0.5, 1)
-addAnimation('.text3-item-circle4', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item6", 0.5, 1)
-// addAnimation('.text3-item5', {opacity: 1}, {opacity: 0.5}, ".textlist-item6", 0.5, 1)
+addAnimation('.text3-item6', {opacity: 1}, {opacity: 0.5}, ".text3list-items-end", 0.5, 1)
+addAnimation('.text3-item-circle6', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-items-end", 0.5, 1)
+
+addAnimation('.text3-item5', {opacity: 1}, {opacity: 0.5}, ".text3list-item6", 0.5, 1)
+addAnimation('.text3-item-circle5', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item6", 0.5, 1)
 addAnimation('.text3-item6', {opacity: 0.5}, {opacity: 1}, ".text3list-item6", 0.5, 1)
 addAnimation('.text3-item-circle6', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item6", 0.5, 1)
+
+addAnimation('.text3-item4', {opacity: 1}, {opacity: 0.5}, ".text3list-item5", 0.5, 1)
+addAnimation('.text3-item-circle4', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item5", 0.5, 1)
+addAnimation('.text3-item5', {opacity: 0.5}, {opacity: 1}, ".text3list-item5", 0.5, 1)
+addAnimation('.text3-item-circle5', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item5", 0.5, 1)
 
 addAnimation('.text3-item3', {opacity: 1}, {opacity: 0.5}, ".text3list-item4", 0.5, 1)
 addAnimation('.text3-item-circle3', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item4", 0.5, 1)
 addAnimation('.text3-item4', {opacity: 0.5}, {opacity: 1}, ".text3list-item4", 0.5, 1)
 addAnimation('.text3-item-circle4', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item4", 0.5, 1)
-// addAnimation('.text3-item5', {opacity: 0.5}, {opacity: 1}, ".textlist-item4", 0.5, 1)
 
 addAnimation('.text3-item2', {opacity: 1}, {opacity: 0.5}, ".text3list-item3", 0.5, 1)
 addAnimation('.text3-item-circle2', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item3", 0.5, 1)
