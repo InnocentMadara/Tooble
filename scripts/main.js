@@ -50,6 +50,9 @@ scene.on("update", e => {
     document.querySelector('.header__logo').style.filter = "invert(100%)";
     document.querySelector('.discount-menu__open-button').style.color = "rgb(16, 16, 16)";
   }
+
+  // delay += (scrollPosition - delay) * accelAmount;
+  videoMainElement.currentTime = scrollPosition;
 })
 
 requestAnimationFrame(setVideoFrame);
@@ -58,9 +61,9 @@ requestAnimationFrame(setVideoFrame);
 function setVideoFrame() {
   requestAnimationFrame(setVideoFrame);
 
-  delay += (scrollPosition - delay) * accelAmount;
+  // delay += (scrollPosition - delay) * accelAmount;
 
-  videoMainElement.currentTime = delay;
+  // videoMainElement.currentTime = delay;
 }
 
 
