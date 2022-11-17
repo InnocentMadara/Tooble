@@ -51,8 +51,8 @@ scene.on("update", e => {
     document.querySelector('.discount-menu__open-button').style.color = "rgb(16, 16, 16)";
   }
 
-  // delay += (scrollPosition - delay) * accelAmount;
   videoMainElement.currentTime = scrollPosition;
+  // delay += (scrollPosition - delay) * accelAmount;
 })
 
 requestAnimationFrame(setVideoFrame);
