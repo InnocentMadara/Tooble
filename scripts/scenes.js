@@ -53,6 +53,7 @@
 //   )
 // .addTo(controller)
 
+
 // addAnimation('.header', {opacity: 0}, {opacity: 1}, ".header-appearing", 0.5, 1)
 
 // addAnimation('.text1', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text1-end", 0.5, 1)
