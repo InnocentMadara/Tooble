@@ -5,6 +5,7 @@ const logo = document.querySelector('.preload__svg-wrapper');
 let percent = 0;
 
 let mediaElements = Array.from(document.querySelectorAll('img, video'));
+const startVideo = document.querySelector('.video-start__element');
 
 document.addEventListener('DOMContentLoaded', function (e) {
   let itemsLoaded = 0;
@@ -47,4 +48,6 @@ window.addEventListener("appload", ()=> {
   setTimeout(function() {
     preloadBlock.style.display = "none";
   }, 300);
+
+  startVideo.play();
 })

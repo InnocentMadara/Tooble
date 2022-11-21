@@ -34,6 +34,8 @@ document.addEventListener('load', function (e) {
   console.log("ok");
 });
 
+let isLocked = false;
+
 scene.on("update", e => {
   scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
 
@@ -51,9 +53,19 @@ scene.on("update", e => {
     document.querySelector('.discount-menu__open-button').style.color = "rgb(16, 16, 16)";
   }
 
+  if(!isLocked){
+    setVideoTime();
+  }
+  isLocked = true;
+  setTimeout(function() {
+    isLocked = false;
+  }, 50);
+})  
+
+function setVideoTime() {
+  delay += (scrollPosition - delay) * accelAmount;
   videoMainElement.currentTime = scrollPosition;
-  // delay += (scrollPosition - delay) * accelAmount;
-})
+}
 
 requestAnimationFrame(setVideoFrame);
 

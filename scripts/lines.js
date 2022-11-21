@@ -4,20 +4,30 @@ const ends = Array.from(document.querySelectorAll('.line-end'));
 
 
 let offset = items.map( item => item.clientWidth - Math.max(...(items.map(item=>item.clientWidth))) );
-let height = [480, 160, 60];
-let flexBasis = [25, 20, 15];
-
+let height = [340, 120, 20];
 let lineWidth = 0;
-lineWidth = window.innerWidth * 0.49 - 390;
+
+let lineStart = 0; 
+let lineEnd = 0; 
+
+
+document.addEventListener('load', function (e) {
+  lineStart = lines[0].getBoundingClientRect().left;
+  console.log(lineStart);
+});
+
+lineWidth = window.innerWidth * 0.53 - 140;
 renderLines();
 
 window.addEventListener('resize', function (e) {
-  lineWidth = window.innerWidth * 0.49 - 390;
+  lineWidth = window.innerWidth * 0.53 - 140;
   // height = height.map((item) => {
   //   return (item - 40) + window.innerHeight * 0.05;
   // })
-  console.log(height);
+  // console.log(height);
   renderLines();
+  console.log(lineStart);
+  lineStart = lines[0].getBoundingClientRect().left;
 });
 
 
