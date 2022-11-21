@@ -65,6 +65,7 @@ scene.on("update", e => {
 function setVideoTime() {
   delay += (scrollPosition - delay) * accelAmount;
   videoMainElement.currentTime = scrollPosition;
+  console.log(scrollPosition);
 }
 
 requestAnimationFrame(setVideoFrame);
