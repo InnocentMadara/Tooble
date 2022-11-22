@@ -75,8 +75,8 @@ function setVideoTime() {
 }
 
 setInterval(() => {
-  setVideoTime();
   // videoMainElement.currentTime += 1000/25/3600;
+  setVideoTime();
 }, 1000/24);
 
 
