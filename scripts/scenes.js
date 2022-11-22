@@ -28,9 +28,6 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
     .addTo(controller)
   }
 
-
-  
-
 window.addEventListener("load", () => {
 
   // addAnimation('.header__logo', {filter: "invert(0%)"}, {filter: "invert(100%)"}, ".header-invert", 0, 1)
@@ -50,7 +47,6 @@ new ScrollMagic.Scene({
   .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
   )
 .addTo(controller)
-
 
 addAnimation('.header', {opacity: 0}, {opacity: 1}, ".header-appearing", 0.5, 1)
 
