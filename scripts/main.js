@@ -59,25 +59,28 @@ scene.on("update", e => {
   isLocked = true;
   setTimeout(function() {
     isLocked = false;
-  }, 50);
+  }, 1000/60);
 })  
 
 function setVideoTime() {
   delay += (scrollPosition - delay) * accelAmount;
-  videoMainElement.currentTime = scrollPosition;
+  videoMainElement.currentTime = delay;
   console.log(scrollPosition);
 }
 
-requestAnimationFrame(setVideoFrame);
+// requestAnimationFrame(setVideoFrame);
 
+// function setVideoFrame() {
+//   delay += (scrollPosition - delay) * accelAmount;
+  
+//   videoMainElement.currentTime = delay;
 
-function setVideoFrame() {
-  requestAnimationFrame(setVideoFrame);
+  
+//   console.log(scrollPosition, videoMainElement.currentTime);
 
-  // delay += (scrollPosition - delay) * accelAmount;
+//   requestAnimationFrame(setVideoFrame);
+// }
 
-  // videoMainElement.currentTime = delay;
-}
 
 
 document.querySelectorAll('.trigger').forEach(trigger => {
