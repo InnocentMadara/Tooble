@@ -59,13 +59,13 @@ scene.on("update", e => {
 
   scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
 
-  if(!isLocked){
-    setVideoTime();
-  }
-  isLocked = true;
-  setTimeout(function() {
-    isLocked = false;
-  }, 1000/24);
+  // if(!isLocked){
+  //   setVideoTime();
+  // }
+  // isLocked = true;
+  // setTimeout(function() {
+  //   isLocked = false;
+  // }, 1000/24);
 })  
 
 function setVideoTime() {
@@ -74,10 +74,10 @@ function setVideoTime() {
   console.log(scrollPosition);
 }
 
-// setInterval(() => {
-//   setVideoTime();
-//   videoMainElement.currentTime += 1000/25/3600;
-// }, 1000/60);
+setInterval(() => {
+  setVideoTime();
+  // videoMainElement.currentTime += 1000/25/3600;
+}, 1000/24);
 
 
 // requestAnimationFrame(setVideoFrame);
