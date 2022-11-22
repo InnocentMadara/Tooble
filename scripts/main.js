@@ -28,10 +28,9 @@ window.addEventListener('resize', function (e) {
   footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
   videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
 });
-document.addEventListener('load', function (e) {
+window.addEventListener('load', function (e) {
   footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
   videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
-  console.log("ok");
 });
 
 
@@ -49,8 +48,6 @@ function setHeaderColor(e) {
     document.querySelector('.discount-menu__open-button').style.color = "rgb(16, 16, 16)";
   }
 }
-
-// setHeaderColor()
 
 let isLocked = false;
 

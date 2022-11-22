@@ -50,12 +50,6 @@
     @include mq(1024){
       max-width: 100%;
     };
-
-
-    &:active path{
-      fill: white;
-      stroke: none;
-    }
     path{
       transition: 0.2s;
       fill: none;
