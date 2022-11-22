@@ -33,8 +33,6 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
 
 window.addEventListener("load", () => {
 
-
-
   // addAnimation('.header__logo', {filter: "invert(0%)"}, {filter: "invert(100%)"}, ".header-invert", 0, 1)
   // addAnimation('.discount-menu__open-button', {color: "rgb(255, 255, 255)"}, {color: "rgb(16, 16, 16)"}, ".header-invert", 0, 1)
   
