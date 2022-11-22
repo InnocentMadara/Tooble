@@ -24,6 +24,7 @@ let delay = 0
 let footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
 let videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
 
+
 window.addEventListener('resize', function (e) {
   footerTopDistance = window.pageYOffset + document.querySelector('.footer').getBoundingClientRect().top;
   videoLightBG = window.pageYOffset + document.querySelector('.header-invert').getBoundingClientRect().top;
