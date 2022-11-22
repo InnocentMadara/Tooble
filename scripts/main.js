@@ -34,12 +34,8 @@ document.addEventListener('load', function (e) {
   console.log("ok");
 });
 
-let isLocked = false;
 
-scene.on("update", e => {
-  scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
-
-  
+function setHeaderColor(e) {
   if(e.scrollPos > footerTopDistance){
     document.querySelector('.header__logo').style.filter = "invert(0%)";
     document.querySelector('.discount-menu__open-button').style.color = "rgb(255, 255, 255)";
@@ -52,6 +48,16 @@ scene.on("update", e => {
     document.querySelector('.header__logo').style.filter = "invert(100%)";
     document.querySelector('.discount-menu__open-button').style.color = "rgb(16, 16, 16)";
   }
+}
+
+// setHeaderColor()
+
+let isLocked = false;
+
+scene.on("update", e => {
+  setHeaderColor(e)
+
+  scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
 
   if(!isLocked){
     setVideoTime();
@@ -59,7 +65,7 @@ scene.on("update", e => {
   isLocked = true;
   setTimeout(function() {
     isLocked = false;
-  }, 1000/24);
+  }, 1000/60);
 })  
 
 function setVideoTime() {
@@ -67,6 +73,12 @@ function setVideoTime() {
   videoMainElement.currentTime = delay;
   console.log(scrollPosition);
 }
+
+// setInterval(() => {
+//   setVideoTime();
+//   videoMainElement.currentTime += 1000/25/3600;
+// }, 1000/60);
+
 
 // requestAnimationFrame(setVideoFrame);
 
