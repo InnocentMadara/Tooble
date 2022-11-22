@@ -56,7 +56,6 @@ scene.on("update", e => {
   if(!isLocked){
     setVideoTime();
   }
-
   isLocked = true;
   setTimeout(function() {
     isLocked = false;
