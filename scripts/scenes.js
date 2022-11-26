@@ -29,12 +29,6 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
   }
 
 window.addEventListener("DOMContentLoaded", () => {
-
-  // addAnimation('.header__logo', {filter: "invert(0%)"}, {filter: "invert(100%)"}, ".header-invert", 0, 1)
-  // addAnimation('.discount-menu__open-button', {color: "rgb(255, 255, 255)"}, {color: "rgb(16, 16, 16)"}, ".header-invert", 0, 1)
-  
-  // addAnimation('.start', {top: "50%"}, {top: "35%"}, ".text-intro", 1, 1)
-  
   
 new ScrollMagic.Scene({
   duration: 0 * 1000,
@@ -43,7 +37,7 @@ new ScrollMagic.Scene({
 .setTween( new TimelineMax()
   .fromTo('.video-start__content', 4, {opacity: 1, top: "50%"}, {opacity: 1, top: "50%"})
   .fromTo('.video-start__content', 5, {pointerEvents: "none", opacity: 1, top: "50%"}, {pointerEvents: "auto", opacity: 1, top: "35%"})
-  .fromTo('.video-start__element', 5, {transform: "translateY(-50%)"}, {transform: "translateY(0%)"}, "-=5")
+  .fromTo('.video-start__element', 5, {transform: "translateY(-50%)"}, {transform: "translateY(0%)"}, "-=2")
   .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
   )
 .addTo(controller)
