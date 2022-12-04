@@ -185,7 +185,7 @@
       display: flex;
 
       &-left{
-        height: 80%;
+        height: 50%;
         align-self: flex-end;
         flex: 0 1 100%;
         border-bottom: 2px solid #BBBBBB;
@@ -194,7 +194,7 @@
       }
       
       &-right{
-        height: 80%;
+        height: 50%;
         align-self: flex-start;
         flex: 0 0 20%;
         border-top: 2px solid #BBBBBB;
