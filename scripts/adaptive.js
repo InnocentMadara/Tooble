@@ -8,7 +8,6 @@ window.addEventListener("resize", (e) => {
   isMobile = (window.innerWidth / window.innerHeight) < 1;
   
   if(before == isMobile){
-    before = isMobile;
     return;
   }
 

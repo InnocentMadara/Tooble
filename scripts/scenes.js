@@ -4,8 +4,23 @@ let topPosition;
 let centerPosition;
 let bottomPosition;
 
+let isTablet = window.innerWidth <= 1024;
+// let isTabletBefore = isTablet;
+// 
+// window.addEventListener("resize", () => {
+//   isTablet = window.innerWidth <= 1024;
+
+//   if(isTabletBefore == isTablet){
+//     return;
+//   }
+
+//   setPosition();
+
+//   isTabletBefore = isTablet;
+// })
+
 function setPosition () {
-  if(window.innerWidth > 1024){
+  if(!isTablet){
     topPosition = "55%";
     centerPosition = "50%";
     bottomPosition = "45%";
@@ -16,6 +31,7 @@ function setPosition () {
     bottomPosition = "15%";
   }
 }
+
 setPosition();
 
 function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5, speed = 1){
