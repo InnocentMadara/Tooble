@@ -2,7 +2,6 @@ const items = Array.from(document.querySelectorAll('.text5-item'));
 const lines = Array.from(document.querySelectorAll('.line'));
 const ends = Array.from(document.querySelectorAll('.line-end'));
 
-
 let offset = items.map( item => item.clientWidth - Math.max(...(items.map(item=>item.clientWidth))) );
 let lineWidth = 0;
 
