@@ -27,7 +27,10 @@ window.addEventListener('load', function (e) {
   lineHeight = heightPercentage.map( h => h * window.innerHeight * aspectRatio );
 
   lines.forEach((line, i) => {
-    line.style = `margin-left: ${60 - offset[i]}px; width: ${lineWidth}px; height: ${lineHeight[i]}px`;
+    if(!isMobile)
+      line.style = `margin-left: ${60 - offset[i]}px; width: ${lineWidth}px; height: ${lineHeight[i]}px`;
+    else
+      line.style = `margin-left: 16px; width: ${lineWidth}px; height: ${lineHeight[i]}px`;
   })
   renderLines();
 });
@@ -52,8 +55,11 @@ window.addEventListener('resize', function (e) {
 
 function setStyles() {
   lines.forEach((line, i) => {
-    line.style = `margin-left: ${60 - offset[i]}px; width: ${lineWidth}px; height: ${lineHeight[i]}px`;
     line.querySelector('.line-right').style = `flex-basis: ${lineWidth * 0.3 + 30 - 30 * i}px`;
+    if(!isMobile)
+      line.style = `margin-left: ${60 - offset[i]}px; width: ${lineWidth}px; height: ${lineHeight[i]}px`;
+    else
+      line.style = `margin-left: 16px; width: ${lineWidth}px; height: ${lineHeight[i]}px`;
   })
 }
 

@@ -26,9 +26,9 @@ function setPosition () {
     bottomPosition = "45%";
   }
   else{
-    topPosition = "25%";
-    centerPosition = "20%";
-    bottomPosition = "15%";
+    topPosition = "15%";
+    centerPosition = "10%";
+    bottomPosition = "5%";
   }
 }
 
