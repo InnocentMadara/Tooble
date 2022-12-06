@@ -22,6 +22,7 @@ function setCursorVisibility () {
   if(isMobile){
     cursor.hidden = true;
   }
+  
   else{
     cursor.hidden = false;
   }
