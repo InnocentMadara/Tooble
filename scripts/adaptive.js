@@ -18,20 +18,20 @@ window.addEventListener("resize", (e) => {
   before = isMobile;
 })
 
-function setVideo (){
-  if(isMobile){
-    video.src = "./video/main-phone.mp4";
-  }
-  else{
-    video.src = "./video/main.mp4";
-  }
-}
-
 function setCursorVisibility () {
   if(isMobile){
     cursor.hidden = true;
   }
   else{
     cursor.hidden = false;
+  }
+}
+
+function setVideo (){
+  if(isMobile){
+    video.src = "./video/main-phone.mp4";
+  }
+  else{
+    video.src = "./video/main.mp4";
   }
 }
