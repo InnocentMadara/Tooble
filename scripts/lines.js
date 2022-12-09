@@ -38,8 +38,8 @@ window.addEventListener('load', function (e) {
   
   setLinePosition();
   
-  setLineStyles();
   // setLineStyles();
+  setLineStyles();
 })
 
 function setLinePosition(){
