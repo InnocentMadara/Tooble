@@ -4,6 +4,7 @@ let before = isMobile;
 
 setVideo();
 setCursorVisibility();
+setTextStyles();
 
 window.addEventListener("resize", (e) => {
   isMobile = (window.innerWidth / window.innerHeight) < 1;
@@ -14,6 +15,7 @@ window.addEventListener("resize", (e) => {
   
   setVideo();
   setCursorVisibility();
+  setTextStyles();
 
   before = isMobile;
 })
@@ -22,7 +24,7 @@ function setCursorVisibility () {
   if(isMobile){
     cursor.hidden = true;
   }
-  
+
   else{
     cursor.hidden = false;
   }
@@ -34,5 +36,18 @@ function setVideo (){
   }
   else{
     video.src = "./video/main.mp4";
+  }
+}
+
+function setTextStyles (){
+  if(isMobile){
+    document.querySelector('.text5-list').style.position = "absolute";
+    document.querySelector('.text5-list').style.top = "10%";
+    document.querySelector('.text5-heading').style.display = "none";
+  }
+  else{
+    document.querySelector('.text5-list').style.position = "";
+    document.querySelector('.text5-list').style.top = "";
+    document.querySelector('.text5-heading').style.display = "";
   }
 }

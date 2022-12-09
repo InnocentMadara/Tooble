@@ -30,9 +30,50 @@ inputs.forEach(input => {
 
 buttons.forEach(button => {
   button.addEventListener('click', function (e) {
-    if(validateEmail(button.parentElement.querySelector(".submit-input").value)){
+    if(validateEmail(button.parentElement.parentElement.querySelector(".submit-input").value)){
       button.querySelector('.submit-button__inner').textContent = "Letter Sent!";
       button.setAttribute('sent', '');
     }
   });
 })
+
+const mailchimpInstance = "us18";
+const listUniqueId = "b816d535dd";
+const submitButton = document.querySelector('.intro-get-discount__submit-button');
+const input = document.querySelector('.intro-get-discount__input');
+
+const http = new XMLHttpRequest();
+const url = 'https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/';
+const data = {
+  email: ""
+};
+
+http.open("POST", url);
+
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  data.email = input.value;
+  http.send(data);
+})
+
+
+
+// --------------------------
+
+// sendToMailChimp(email, ) {
+//  const client = require("@mailchimp/mailchimp_marketing");
+
+// client.setConfig({
+//   apiKey: "YOUR_API_KEY",
+//   server: "YOUR_SERVER_PREFIX",
+// });
+
+// const run = async () => {
+//   const response = await client.lists.addListMember("list_id", {
+//     email_address: "Ebony_Brekke@gmail.com",
+//     status: "pending",
+//   });
+//   console.log(response);
+// };
+// }
+

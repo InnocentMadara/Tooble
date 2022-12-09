@@ -109,10 +109,23 @@ addAnimation('.text-list', {opacity: 0}, {opacity: 1}, ".textlist-start", 0.5, 1
 addAnimation('.text4', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text4-end", 0.5, 1)
 addAnimation('.text4', {opacity: 0, top: topPosition}, {opacity: 1, top: centerPosition}, ".text4-start", 0.5, 1)
 
-addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text5-end", 0.5, 1)
-addAnimation('.text5-block', {top: (parseInt(topPosition)+7)+"%" }, {top: centerPosition}, ".text5list-start", 1, 1)
-addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
-addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, {opacity: 1, top: (parseInt(topPosition)+7)+"%"}, ".text5-start", 0.5, 1)
+// addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text5-end", 0.5, 1)
+// addAnimation('.text5-block', {top: (parseInt(topPosition)+7)+"%" }, {top: centerPosition}, ".text5list-start", 1, 1)
+// addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
+// addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, {opacity: 1, top: (parseInt(topPosition)+7)+"%"}, ".text5-start", 0.5, 1)
+
+if(isMobile){
+  addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text5-end", 0.5, 1)
+  addAnimation('.text5-block', {top: (parseInt(centerPosition))+"%" }, {top: bottomPosition}, ".text5list-start", 1, 1)
+  addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
+  addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition))+"%"}, {opacity: 1, top: (parseInt(centerPosition))+"%"}, ".text5-start", 0.5, 1)
+}
+else{
+  addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text5-end", 0.5, 1)
+  addAnimation('.text5-block', {top: (parseInt(topPosition)+7)+"%" }, {top: centerPosition}, ".text5list-start", 1, 1)
+  addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
+  addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, {opacity: 1, top: (parseInt(topPosition)+7)+"%"}, ".text5-start", 0.5, 1)  
+}
 
 // window.addEventListener("resize", () => {
   if(window.innerWidth <= 1024){

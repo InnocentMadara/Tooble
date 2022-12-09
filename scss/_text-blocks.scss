@@ -162,14 +162,17 @@
     display: inline-flex;
 
     margin-top: 20px;
+    padding-right: 60px;
     color: rgba($black, 1);
     font-size: 24px;
     line-height: 32px;
 
     @include mq(1024){
       font-size: 20px;
+      padding-right: 30px;
     };
     @include mq(600){
+      padding-right: 20px;
       font-size: 16px;
     };
 
@@ -178,32 +181,55 @@
       bottom: 14px;
       left: 100%;
 
-      width: 100px;
-      height: 400px;
-
-
       display: flex;
 
+      &[inverted]{
+        bottom: auto;
+        top: 14px;
+      }
       &-left{
         height: 50%;
         align-self: flex-end;
         flex: 0 1 100%;
-        border-bottom: 2px solid #BBBBBB;
-        border-right: 2px solid #BBBBBB;
+        border-bottom: 10px solid #BBBBBB;
+        border-right: 10px solid #BBBBBB;
         border-bottom-right-radius: 12px;
+        
+      }
+      &[inverted] .line-left{
+        align-self: flex-start;
+        border-bottom: 0;
+        border-top: 10px solid #BBBBBB;
       }
       
       &-right{
         height: 50%;
         align-self: flex-start;
         flex: 0 0 20%;
-        border-top: 2px solid #BBBBBB;
-        border-left: 2px solid #BBBBBB;
+        border-top: 10px solid #BBBBBB;
+        border-left: 10px solid #BBBBBB;
         border-top-left-radius: 12px;
         transform: translateX(-2px);
+        
+      } 
+      &[inverted] .line-right{
+        align-self: flex-end;
+        border-top: 0;
+        border-bottom: 10px solid #BBBBBB;
       }
     }
   }
+}
+
+.line-end{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  z-index: 10000000;
+  border-left: 4px solid green;
+  border-top: 4px solid green;
 }
 
 .text7 {
