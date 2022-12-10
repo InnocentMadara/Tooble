@@ -191,23 +191,25 @@
         height: 50%;
         align-self: flex-end;
         flex: 0 1 100%;
-        border-bottom: 10px solid #BBBBBB;
-        border-right: 10px solid #BBBBBB;
+        border-bottom: 2px solid #BBBBBB;
+        border-right: 2px solid #BBBBBB;
         border-bottom-right-radius: 12px;
         
       }
       &[inverted] .line-left{
         align-self: flex-start;
         border-bottom: 0;
-        border-top: 10px solid #BBBBBB;
+        border-top: 2px solid #BBBBBB;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 12px;
       }
       
       &-right{
         height: 50%;
         align-self: flex-start;
         flex: 0 0 20%;
-        border-top: 10px solid #BBBBBB;
-        border-left: 10px solid #BBBBBB;
+        border-top: 2px solid #BBBBBB;
+        border-left: 2px solid #BBBBBB;
         border-top-left-radius: 12px;
         transform: translateX(-2px);
         
@@ -215,7 +217,9 @@
       &[inverted] .line-right{
         align-self: flex-end;
         border-top: 0;
-        border-bottom: 10px solid #BBBBBB;
+        border-bottom: 2px solid #BBBBBB;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 12px;
       }
     }
   }

@@ -46,6 +46,7 @@ function setLinePosition(){
   lineLeft = lines.map(line => line.getBoundingClientRect().left);
   lineBottom = lines.map((line, i)=> windowHeight - items[i].getBoundingClientRect().top - 14);
   lineTop = [0.2, 0.55, 0.7].map(line => (line + (textBlockTop - 50)/100));
+  console.log(0.7, (textBlockTop-50) / 100);
   lineRight = lines.map(line => windowWidth * ( aspectRatio * 0.1414 + 0.1086));
 }
 

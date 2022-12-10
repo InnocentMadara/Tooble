@@ -37,24 +37,24 @@ buttons.forEach(button => {
   });
 })
 
-const mailchimpInstance = "us18";
-const listUniqueId = "b816d535dd";
-const submitButton = document.querySelector('.intro-get-discount__submit-button');
-const input = document.querySelector('.intro-get-discount__input');
+// const mailchimpInstance = "us18";
+// const listUniqueId = "b816d535dd";
+// const submitButton = document.querySelector('.intro-get-discount__submit-button');
+// const input = document.querySelector('.intro-get-discount__input');
 
-const http = new XMLHttpRequest();
-const url = 'https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/';
-const data = {
-  email: ""
-};
+// const http = new XMLHttpRequest();
+// const url = 'https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/';
+// const data = {
+//   email: ""
+// };
 
-http.open("POST", url);
+// http.open("POST", url);
 
-submitButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  data.email = input.value;
-  http.send(data);
-})
+// submitButton.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   data.email = input.value;
+//   http.send(data);
+// })
 
 
 
