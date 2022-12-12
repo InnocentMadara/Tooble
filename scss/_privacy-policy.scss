@@ -126,6 +126,7 @@
     margin-left: 20px;
     @include mq(600){
       margin-left: 0;
+      margin-bottom: 20px;
     };
   }
 }

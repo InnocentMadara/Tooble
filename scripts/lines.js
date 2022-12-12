@@ -11,7 +11,7 @@ let lineTopRaw = [];
 
 function setLineTop(){
   if(isMobile){
-    lineTopRaw = [0.38, 0.7, 0.78];
+    lineTopRaw = [0.38, 0.7, 0.8];
   }
   else{
     lineTopRaw = [0.2, 0.55, 0.7];
@@ -77,7 +77,7 @@ function setLinePosition(){
     lineRight = [0.2, 0.3, 0.52].map(line => line * windowWidth);
   }
   else{
-    lineRight = lines.map(line => windowWidth * ( aspectRatio * 0.1414 + 0.1086));
+    lineRight = lines.map(line => windowWidth * ( aspectRatio * 0.1414 + 0.1186));
   }
 }
 

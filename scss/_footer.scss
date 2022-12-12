@@ -209,7 +209,8 @@
     line-height: 24px;
     opacity: 0.75;
 
-    &.footer__privacy-policy {
+    &.footer__privacy-policy,
+    &.footer__terms {
       cursor: pointer;
     }
 
