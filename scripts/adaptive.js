@@ -1,5 +1,6 @@
 const video = document.querySelector('.video-main__element');
 let isMobile = (window.innerWidth / window.innerHeight) < 1;
+let isTablet = window.innerWidth <= 1024 && !isMobile;
 let before = isMobile;
 
 setVideo();

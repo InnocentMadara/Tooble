@@ -4,7 +4,9 @@ let topPosition;
 let centerPosition;
 let bottomPosition;
 
-let isTablet = window.innerWidth <= 1024;
+let circle;
+let circleActive;
+
 // let isTabletBefore = isTablet;
 // 
 // window.addEventListener("resize", () => {
@@ -20,15 +22,21 @@ let isTablet = window.innerWidth <= 1024;
 // })
 
 function setPosition () {
-  if(!isTablet){
+  if(!isTablet && !isMobile){
     topPosition = "55%";
     centerPosition = "50%";
     bottomPosition = "45%";
+
+    circle = "16px";
+    circleActive = "24px"
   }
   else{
     topPosition = "15%";
     centerPosition = "10%";
     bottomPosition = "5%";
+
+    circle = "10px";
+    circleActive = "20px"
   }
 }
 
@@ -73,35 +81,35 @@ addAnimation('.text3-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, 
 
 
 addAnimation('.text3-item6', {opacity: 1}, {opacity: 0.5}, ".text3list-items-end", 0.5, 1)
-addAnimation('.text3-item-circle6', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-items-end", 0.5, 1)
+addAnimation('.text3-item-circle6', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text3list-items-end", 0.5, 1)
 
 addAnimation('.text3-item5', {opacity: 1}, {opacity: 0.5}, ".text3list-item6", 0.5, 1)
-addAnimation('.text3-item-circle5', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item6", 0.5, 1)
+addAnimation('.text3-item-circle5', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text3list-item6", 0.5, 1)
 addAnimation('.text3-item6', {opacity: 0.5}, {opacity: 1}, ".text3list-item6", 0.5, 1)
-addAnimation('.text3-item-circle6', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item6", 0.5, 1)
+addAnimation('.text3-item-circle6', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text3list-item6", 0.5, 1)
 
 addAnimation('.text3-item4', {opacity: 1}, {opacity: 0.5}, ".text3list-item5", 0.5, 1)
-addAnimation('.text3-item-circle4', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item5", 0.5, 1)
+addAnimation('.text3-item-circle4', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text3list-item5", 0.5, 1)
 addAnimation('.text3-item5', {opacity: 0.5}, {opacity: 1}, ".text3list-item5", 0.5, 1)
-addAnimation('.text3-item-circle5', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item5", 0.5, 1)
+addAnimation('.text3-item-circle5', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text3list-item5", 0.5, 1)
 
 addAnimation('.text3-item3', {opacity: 1}, {opacity: 0.5}, ".text3list-item4", 0.5, 1)
-addAnimation('.text3-item-circle3', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item4", 0.5, 1)
+addAnimation('.text3-item-circle3', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text3list-item4", 0.5, 1)
 addAnimation('.text3-item4', {opacity: 0.5}, {opacity: 1}, ".text3list-item4", 0.5, 1)
-addAnimation('.text3-item-circle4', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item4", 0.5, 1)
+addAnimation('.text3-item-circle4', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text3list-item4", 0.5, 1)
 
 addAnimation('.text3-item2', {opacity: 1}, {opacity: 0.5}, ".text3list-item3", 0.5, 1)
-addAnimation('.text3-item-circle2', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item3", 0.5, 1)
+addAnimation('.text3-item-circle2', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text3list-item3", 0.5, 1)
 addAnimation('.text3-item3', {opacity: 0.5}, {opacity: 1}, ".text3list-item3", 0.5, 1)
-addAnimation('.text3-item-circle3', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item3", 0.5, 1)
+addAnimation('.text3-item-circle3', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text3list-item3", 0.5, 1)
 
 addAnimation('.text3-item1', {opacity: 1}, {opacity: 0.5}, ".text3list-item2", 0.5, 1)
-addAnimation('.text3-item-circle1', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text3list-item2", 0.5, 1)
+addAnimation('.text3-item-circle1', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text3list-item2", 0.5, 1)
 addAnimation('.text3-item2', {opacity: 0.5}, {opacity: 1}, ".text3list-item2", 0.5, 1)
-addAnimation('.text3-item-circle2', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item2", 0.5, 1)
+addAnimation('.text3-item-circle2', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text3list-item2", 0.5, 1)
 
 addAnimation('.text3-item1', {opacity: 0.5}, {opacity: 1}, ".text3list-item1", 0.5, 1)
-addAnimation('.text3-item-circle1', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text3list-item1", 0.5, 1)
+addAnimation('.text3-item-circle1', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text3list-item1", 0.5, 1)
 
 
 addAnimation('.text-list', {opacity: 0}, {opacity: 1}, ".textlist-start", 0.5, 1)
@@ -114,11 +122,24 @@ addAnimation('.text4', {opacity: 0, top: topPosition}, {opacity: 1, top: centerP
 // addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
 // addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition)+12)+"%"}, {opacity: 1, top: (parseInt(topPosition)+7)+"%"}, ".text5-start", 0.5, 1)
 
+addAnimation('.text5-item3', {opacity: 1}, {opacity: 0.5}, ".text5list-item4", 0.5, 1)
+
+addAnimation('.text5-item2', {opacity: 1}, {opacity: 0.5}, ".text5list-item3", 0.5, 1)
+addAnimation('.text5-item-circle2', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text5list-item3", 0.5, 1)
+addAnimation('.text5-item3', {opacity: 0.5}, {opacity: 1}, ".text5list-item3", 0.5, 1)
+addAnimation('.text5-item-circle3', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text5list-item3", 0.5, 1)
+
+addAnimation('.text5-item1', {opacity: 1}, {opacity: 0.5}, ".text5list-item2", 0.5, 1)
+addAnimation('.text5-item-circle1', {filter: "grayscale(0%)", width: circleActive, height: circleActive}, {filter: "grayscale(100%)", width: circle, height: circle}, ".text5list-item2", 0.5, 1)
+addAnimation('.text5-item2', {opacity: 0.5}, {opacity: 1}, ".text5list-item2", 0.5, 1)
+addAnimation('.text5-item-circle2', {filter: "grayscale(100%)", width: circle, height: circle}, {filter: "grayscale(0%)", width: circleActive, height: circleActive}, ".text5list-item2", 0.5, 1)
+
+
 if(isMobile){
-  addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text5-end", 0.5, 1)
-  addAnimation('.text5-block', {top: (parseInt(centerPosition))+"%" }, {top: bottomPosition}, ".text5list-start", 1, 1)
+  addAnimation('.text5-block', {opacity: 1, top: bottomPosition}, {opacity: 0, top: parseInt(bottomPosition) - 5 + "%"}, ".text5-end", 0.5, 1)
+  addAnimation('.text5-block', {top: centerPosition}, {top: bottomPosition}, ".text5list-start", 1, 1)
   addAnimation('.text5-list', {opacity: 0}, {opacity: 1}, ".text5list-start", 1, 1)
-  addAnimation('.text5-block', {opacity: 0, top: (parseInt(topPosition))+"%"}, {opacity: 1, top: (parseInt(centerPosition))+"%"}, ".text5-start", 0.5, 1)
+  addAnimation('.text5-block', {opacity: 0, top: topPosition}, {opacity: 1, top: centerPosition}, ".text5-start", 0.5, 1)
 }
 else{
   addAnimation('.text5-block', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text5-end", 0.5, 1)
@@ -132,19 +153,6 @@ else{
     addAnimation('.text5-title', {opacity: 1}, {opacity: 0}, ".text5list-start", 1, 1)
   }
 // })
-
-addAnimation('.text5-item3', {opacity: 1}, {opacity: 0.5}, ".text5list-item4", 0.5, 1)
-
-addAnimation('.text5-item2', {opacity: 1}, {opacity: 0.5}, ".text5list-item3", 0.5, 1)
-addAnimation('.text5-item-circle2', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text5list-item3", 0.5, 1)
-addAnimation('.text5-item3', {opacity: 0.5}, {opacity: 1}, ".text5list-item3", 0.5, 1)
-addAnimation('.text5-item-circle3', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text5list-item3", 0.5, 1)
-
-addAnimation('.text5-item1', {opacity: 1}, {opacity: 0.5}, ".text5list-item2", 0.5, 1)
-addAnimation('.text5-item-circle1', {filter: "grayscale(0%)", width: "24px", height: "24px"}, {filter: "grayscale(100%)", width: "16px", height: "16px"}, ".text5list-item2", 0.5, 1)
-addAnimation('.text5-item2', {opacity: 0.5}, {opacity: 1}, ".text5list-item2", 0.5, 1)
-addAnimation('.text5-item-circle2', {filter: "grayscale(100%)", width: "16px", height: "16px"}, {filter: "grayscale(0%)", width: "24px", height: "24px"}, ".text5list-item2", 0.5, 1)
-
 
 addAnimation('.text6', {opacity: 1, top: centerPosition}, {opacity: 0, top: bottomPosition}, ".text6-end", 0.5, 1)
 addAnimation('.text6', {opacity: 0, top: topPosition}, {opacity: 1, top: centerPosition}, ".text6-start", 0.5, 1)

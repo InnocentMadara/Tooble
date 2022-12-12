@@ -1,6 +1,10 @@
 const inputs = Array.from(document.querySelectorAll('.submit-input'));
 const buttons = Array.from(document.querySelectorAll('.submit-button'))
 
+const mailchimpInput = document.querySelector('#mce-EMAIL');
+const mailchimpSubmit = document.querySelector('#mc-embedded-subscribe');
+const mailchimpForm = document.querySelector('#mc-embedded-subscribe-form');
+
 const validateEmail = (email) => {
   return email.match(
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -30,50 +34,14 @@ inputs.forEach(input => {
 
 buttons.forEach(button => {
   button.addEventListener('click', function (e) {
-    if(validateEmail(button.parentElement.parentElement.querySelector(".submit-input").value)){
+    let email = button.parentElement.parentElement.querySelector(".submit-input").value;
+
+    if(validateEmail(email)){
       button.querySelector('.submit-button__inner').textContent = "Letter Sent!";
       button.setAttribute('sent', '');
+
+      mailchimpInput.value = email;
+      mailchimpSubmit.click();
     }
   });
 })
-
-// const mailchimpInstance = "us18";
-// const listUniqueId = "b816d535dd";
-// const submitButton = document.querySelector('.intro-get-discount__submit-button');
-// const input = document.querySelector('.intro-get-discount__input');
-
-// const http = new XMLHttpRequest();
-// const url = 'https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/';
-// const data = {
-//   email: ""
-// };
-
-// http.open("POST", url);
-
-// submitButton.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   data.email = input.value;
-//   http.send(data);
-// })
-
-
-
-// --------------------------
-
-// sendToMailChimp(email, ) {
-//  const client = require("@mailchimp/mailchimp_marketing");
-
-// client.setConfig({
-//   apiKey: "YOUR_API_KEY",
-//   server: "YOUR_SERVER_PREFIX",
-// });
-
-// const run = async () => {
-//   const response = await client.lists.addListMember("list_id", {
-//     email_address: "Ebony_Brekke@gmail.com",
-//     status: "pending",
-//   });
-//   console.log(response);
-// };
-// }
-
