@@ -51,3 +51,10 @@ window.addEventListener("appload", ()=> {
 
   startVideo.play();
 })
+
+let div = document.createElement("div");
+div.style = "position: fixed; top: 0; left: 0; width: 100px; height: 100px; left: 0; background: green; z-index: 10000000";
+
+document.querySelector('.video-main__element').onloadeddata = (e) => {
+  document.body.append(div);
+}
