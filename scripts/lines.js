@@ -98,8 +98,6 @@ function setLineStyles(){
     line.style.width =  width + "px";
     line.style.height = height + "px";
     
-    console.log({id: i+1, height:height ,windowHeight, lineTop: lineTop[i] * windowHeight,lineBottom: lineBottom[i]});
-
     if(isMobile){
       line.querySelector('.line-right').style = `flex-basis: ${ width * 0.3 + 30 - 30 * i }px`;
     }

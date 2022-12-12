@@ -6,6 +6,10 @@ let percent = 0;
 
 let mediaElements = Array.from(document.querySelectorAll('img, video'));
 const startVideo = document.querySelector('.video-start__element');
+const mainVideo = document.querySelector('.video-main__element');
+let isVideoLoaded = false;
+
+mainVideo.oncanplay = () => {isVideoLoaded = true};
 
 document.addEventListener('DOMContentLoaded', function (e) {
   let itemsLoaded = 0;
@@ -13,9 +17,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   let interval = setInterval(function() {
     percent += 10;
-    logo.style.height = percent + "%";
-    
-    if(percent >= 100){
+    if(percent < 100){  
+      logo.style.height = percent + "%";
+    }
+
+    if(percent >= 100 && isVideoLoaded){
       window.dispatchEvent(appLoadEvent);  
       clearInterval(interval);
     }
@@ -51,10 +57,3 @@ window.addEventListener("appload", ()=> {
 
   startVideo.play();
 })
-
-let div = document.createElement("div");
-div.style = "position: fixed; top: 0; left: 0; width: 100px; height: 100px; left: 0; background: green; z-index: 10000000";
-
-document.querySelector('.video-main__element').onloadeddata = (e) => {
-  document.body.append(div);
-}
