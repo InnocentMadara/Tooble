@@ -25,6 +25,20 @@ privacyBlock.addEventListener("click", e => {
   document.body.style.overflow = 'auto';
 })
 
+const termsButton = document.querySelector('.footer__terms');
+const termsBlock = document.querySelector('.terms');
+
+termsButton.addEventListener("click", e => {
+  termsBlock.setAttribute('active', '');
+  document.body.style.overflow = 'hidden';
+});
+
+termsBlock.addEventListener("click", e => {
+  if (!e.target.closest('.terms__back-button') && !e.target.closest('.terms__close-button')) return;
+  termsBlock.removeAttribute('active');
+  document.body.style.overflow = 'auto';
+})
+
 
 const introGetDiscount = document.querySelector('.video-start__get-discount');
 const introBlock = document.querySelector('.intro-get-discount');
