@@ -293,7 +293,7 @@
             <div class="slider__pagination swiper-pagination"></div>
           </div>
         </div>
-        <div class="slider__cursor">
+        <div class="slider__cursor" unactive>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8.39056 8.00021C8.37589 7.81162 8.43321 7.61898 8.57785 7.47502L14.5245 1.53837C14.7871 1.27645 15.2123 1.27645 15.4749 1.53837C15.7375 1.80031 15.7375 2.2249 15.4749 2.48749L9.95284 8.00021L15.4749 13.513C15.7375 13.7749 15.7375 14.1995 15.4749 14.4614C15.2123 14.7233 14.7871 14.7233 14.5245 14.4614L8.57782 8.52475C8.43321 8.38079 8.37654 8.18886 8.39056 8.00021ZM0.51368 7.47502L7.80466 0.196683C8.06728 -0.0652354 8.49252 -0.0652354 8.75511 0.196683C9.01773 0.458626 9.01773 0.883864 8.75511 1.14513L1.88869 8.00021L8.75514 14.8546C9.01776 15.1166 9.01776 15.5411 8.75514 15.8038C8.49252 16.0657 8.06728 16.0657 7.80468 15.8038L0.514382 8.52545C0.369744 8.38149 0.313098 8.18886 0.327767 8.00024C0.312396 7.81162 0.36972 7.61898 0.51368 7.47502Z"
@@ -442,7 +442,18 @@
       <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
     </form>
 
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <form action="https://world.us18.list-manage.com/subscribe/post" method="POST">
+      <input type="hidden" name="u" value="a3c91123fc1f5fe4ebffd6be7">
+      <input type="hidden" name="id" value="b816d535dd">
+      
+      <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+      <input type="submit" class="formEmailButton" name="submit" value="Subscribe">
+
+      <!-- <input type="email" name="b_email" tabindex="-1" value="" placeholder="youremail@gmail.com" id="b_email">
+      <input type="submit" class="formEmailButton" name="submit" value="Subscribe"> -->
+    </form>
+    
+    <!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
     (function($) {
     window.fnames = new Array();
@@ -460,7 +471,7 @@
     fnames[5]='BIRTHDAY';
     ftypes[5]='birthday';
     }(jQuery));
-    var $mcj = jQuery.noConflict(true);</script>
+    var $mcj = jQuery.noConflict(true);</script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
@@ -468,6 +479,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./scripts/preload.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/menu.js"></script>

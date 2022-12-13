@@ -40,8 +40,29 @@ buttons.forEach(button => {
       button.querySelector('.submit-button__inner').textContent = "Letter Sent!";
       button.setAttribute('sent', '');
 
+      // sendEmail(email);
+
       mailchimpInput.value = email;
       mailchimpSubmit.click();
     }
   });
 })
+
+
+// const sendEmail = (email) => {
+//   axios.post(
+//     'https://us18.api.mailchimp.com/3.0/lists/b816d535dd/members/', 
+//     {
+//       email: email
+//     },
+//     {
+//       headers: {
+//         "Content-Type": "application/json",
+//         "Access-Control-Allow-Origin": "*",
+//         "Access-Control-Allow-Methods": "GET, POST",
+//         "Access-Control-Allow-Headers": "X-Requested-With",
+//         'Access-Control-Allow-Credentials': true
+//       }
+//     }
+//   ).then(response=> console.log(response))
+// }

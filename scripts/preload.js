@@ -26,27 +26,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
       clearInterval(interval);
     }
   }, 300);
-
-  // mediaElements.forEach(item => {
-  //   item.onload = () => {
-  //     itemsLoaded += 1;
-      
-  //     mediaElements.splice(mediaElements.indexOf(item), 1);
-
-  //     console.log(item);
-
-  //     percent = (itemsLoaded / itemsMax) * 100;
-      
-  //     logo.style.height = percent + "%";
-      
-  //     if(percent >= 100){
-  //       window.dispatchEvent(appLoadEvent);  
-  //     }
-  //   };
-  //   item.onerror = () => {
-  //     console.log("error",  item);
-  //   }
-  // })
 });
 
 window.addEventListener("appload", ()=> {
