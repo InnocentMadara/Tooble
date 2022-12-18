@@ -35,6 +35,9 @@ function setVideo (){
   if(isMobile){
     video.src = "./video/main-phone.mp4";
   }
+  else if(isTablet){
+    video.src = "./video/main-tablet.mp4";
+  }
   else{
     video.src = "./video/main.mp4";
   }

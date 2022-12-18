@@ -13,6 +13,9 @@ function setLineTop(){
   if(isMobile){
     lineTopRaw = [0.38, 0.7, 0.8];
   }
+  else if(isTablet){
+    lineTopRaw = [0.28, 0.55, 0.65];
+  }
   else{
     lineTopRaw = [0.2, 0.55, 0.7];
   }
@@ -75,6 +78,9 @@ function setLinePosition(){
   lineTop = lineTopRaw.map(line => ((line + (textBlockTop - textBlockTopAvg)/100) ));
   if(isMobile){
     lineRight = [0.2, 0.3, 0.52].map(line => line * windowWidth);
+  }
+  else if(isTablet){
+    lineRight = lines.map(line => windowWidth * 0.36);
   }
   else{
     lineRight = lines.map(line => windowWidth * ( aspectRatio * 0.1414 + 0.1186));

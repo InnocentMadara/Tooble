@@ -9,11 +9,13 @@ const startVideo = document.querySelector('.video-start__element');
 const mainVideo = document.querySelector('.video-main__element');
 let isVideoLoaded = false;
 
+document.body.style.overflowY = "hidden";
+
 mainVideo.oncanplay = () => {isVideoLoaded = true};
 
 document.addEventListener('DOMContentLoaded', function (e) {
+
   let itemsLoaded = 0;
-  // let itemsMax = mediaElements.length;
 
   let interval = setInterval(function() {
     percent += 10;
@@ -29,10 +31,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
 });
 
 window.addEventListener("appload", ()=> {
+  window.scrollTo({top:  0});
   preloadBlock.style.opacity = "0";
   setTimeout(function() {
     preloadBlock.style.display = "none";
   }, 300);
+
+  document.body.style.overflowY = "auto";
 
   startVideo.play();
 })
