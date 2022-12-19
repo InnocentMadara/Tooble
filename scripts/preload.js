@@ -11,7 +11,7 @@ let isVideoLoaded = false;
 
 document.body.style.overflowY = "hidden";
 
-mainVideo.oncanplay = () => {isVideoLoaded = true};
+// mainVideo.oncanplay = () => {isVideoLoaded = true};
 
 document.addEventListener('DOMContentLoaded', function (e) {
 
@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     if(percent < 100){  
       logo.style.height = percent + "%";
     }
-
-    if(percent >= 100 && isVideoLoaded){
+    if(percent >= 100 && mainVideo.readyState >= 4){
       window.dispatchEvent(appLoadEvent);  
       clearInterval(interval);
     }
