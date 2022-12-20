@@ -54,17 +54,17 @@ function addAnimation(element, startStyle, endStyle, trigger, animDuration = 0.5
 
 window.addEventListener("DOMContentLoaded", () => {
   
-new ScrollMagic.Scene({
-  duration: 0 * 1000,
-  triggerHook: 0
-})
-.setTween( new TimelineMax()
-  .fromTo('.video-start__content', 4, {opacity: 1, top: "50%"}, {opacity: 1, top: "50%"})
-  .fromTo('.video-start__content', 5, {pointerEvents: "none", opacity: 1, top: "50%"}, {pointerEvents: "auto", opacity: 1, top: "35%"})
-  .fromTo('.video-start__element', 5, {transform: "translateY(-50%)"}, {transform: "translateY(0%)"}, "-=2")
-  .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
-  )
-.addTo(controller)
+// new ScrollMagic.Scene({
+//   duration: 0 * 1000,
+//   triggerHook: 0
+// })
+// .setTween( new TimelineMax()
+//   .fromTo('.video-start__content', 4, {opacity: 1, top: "50%"}, {opacity: 1, top: "50%"})
+//   .fromTo('.video-start__content', 5, {pointerEvents: "none", opacity: 1, top: "50%"}, {pointerEvents: "auto", opacity: 1, top: "35%"})
+//   .fromTo('.video-start__element', 5, {transform: "translateY(-50%)"}, {transform: "translateY(0%)"}, "-=2")
+//   .fromTo('.video-start__text-block', 3, {opacity: 0}, {opacity: 1}, '-=4')
+//   )
+// .addTo(controller)
 
 addAnimation('.header', {opacity: 0}, {opacity: 1}, ".header-appearing", 0.5, 1)
 

@@ -49,16 +49,17 @@ input {
   align-items: center;
   outline: 0;
   
-  &:visited, &:active{
-    color: inherit;
-  }
-
+  
   &:disabled{
     pointer-events: none;
     opacity: 0.2;
   }
 
   &__inner {
+    &:visited, &:active{
+      color: black;
+    }
+
     box-shadow: 0 0 0 10px rgba($gold, 0.05),
       0 0 0 20px rgba($gold, 0.05);
 

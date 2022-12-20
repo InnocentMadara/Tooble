@@ -21,13 +21,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: transform 0.3s;
+    top: 50%;
     opacity: 1;
-
+    z-index: 40;
+    color: white;
+    
+    transition: 
+    top 3s linear 2s;
+    
     
     @include mq(600){
       margin-top: 20%;
     };
+  }
+  .video-start[appeared] &__content{
+    pointer-events: all;
+    top: 35%;
   }
 
   // .video-start__logo
@@ -82,6 +91,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+
+    transition: opacity 0.5s linear 2s;
+  }
+  .video-start[appeared] &__text-block{
+    opacity: 1;
   }
 
   // .video-start__text
@@ -120,6 +135,10 @@
     @include mq(1024){
       height: 110vw;
     };
+    transition: transform 3s linear 2s;
+  }
+  .video-start[appeared] &__element{
+    transform: translateY(0%);
   }
 }
 

@@ -39,5 +39,6 @@ window.addEventListener("appload", ()=> {
 
   document.body.style.overflowY = "auto";
 
+  document.querySelector('.video-start').setAttribute("appeared", "");
   startVideo.play();
 })

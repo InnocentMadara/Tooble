@@ -1,4 +1,7 @@
 'use strict';
+
+mainVideo.playbackRate = 0;
+
 const videoOffset = window.pageYOffset + document.querySelector('.triggers').getBoundingClientRect().top;
 
 const videoMainDuration = 54;
@@ -56,6 +59,10 @@ scene.on("update", e => {
   setHeaderColor(e)
 
   scrollPosition = (e.scrollPos - videoOffset) / 1000 * (1 / scrollSensivity);
+
+  if(!videoMainElement.paused){
+    videoMainElement.pause();
+  }
 
   // if(!isLocked){
   //   setVideoTime();
