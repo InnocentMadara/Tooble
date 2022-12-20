@@ -11,9 +11,7 @@ let isVideoLoaded = false;
 
 document.body.style.overflowY = "hidden";
 
-// mainVideo.oncanplay = () => {
-//   isVideoLoaded = true
-// };
+mainVideo.oncanplay = () => {isVideoLoaded = true};
 
 document.addEventListener('DOMContentLoaded', function (e) {
 
@@ -24,9 +22,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
     if(percent < 100){  
       logo.style.height = percent + "%";
     }
-    if(percent >= 100 
-      // && mainVideo.readyState >= 4
-      ){
+
+    if(percent >= 100 && isVideoLoaded){
       window.dispatchEvent(appLoadEvent);  
       clearInterval(interval);
     }
@@ -34,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 });
 
 window.addEventListener("appload", ()=> {
-  window.scrollTo({top:  0});
+  window.scrollTo({top: 0});
   preloadBlock.style.opacity = "0";
   setTimeout(function() {
     preloadBlock.style.display = "none";
