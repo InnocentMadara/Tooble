@@ -11,7 +11,10 @@ let isVideoLoaded = false;
 
 document.body.style.overflowY = "hidden";
 
-// mainVideo.oncanplay = () => {isVideoLoaded = true};
+mainVideo.oncanplay = () => {
+  // isVideoLoaded = true
+  mainVideo.autoplay = false;
+};
 
 document.addEventListener('DOMContentLoaded', function (e) {
 
