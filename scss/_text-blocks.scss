@@ -108,6 +108,10 @@
   opacity: 0;
   list-style: none;
 
+  @include mq(600){
+    margin-top: 5px;
+  };
+  
   .text3-item {
     position: relative;
     padding-left: 64px;
@@ -123,9 +127,15 @@
 
     @include mq(1024){
       font-size: 20px;
+      margin-top: 15px;
     };
     @include mq(600){
       font-size: 16px;
+      margin-top: 10px;
+    };
+    @include mq(460){
+      font-size: 16px;
+      margin-top: 12px;
     };
   }
 }

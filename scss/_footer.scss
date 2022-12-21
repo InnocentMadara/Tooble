@@ -91,6 +91,7 @@
     font-size: 36px;
     line-height: 49px;
     margin-right: 40px;
+    color: $white;
 
     @include mq(768) {
       margin-right: 0;
@@ -168,13 +169,9 @@
       align-items: flex-start;
     }
 
-    ;
-
     @include mq(600) {
       margin-top: 150px;
     }
-
-    ;
   }
 
   // .footer__copyright
@@ -189,13 +186,9 @@
       font-size: 20px;
     }
 
-    ;
-
     @include mq(600) {
       font-size: 16px;
     }
-
-    ;
   }
 
   // .footer__terms-list

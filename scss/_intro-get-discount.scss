@@ -14,9 +14,11 @@
 
   @include mq(1024){
     padding-left: 80px;
+    margin-right: 80px;
   };
   @include mq(600){
     padding-left: 20px;
+    margin-right: 40px;
   };
   
   &[active]{

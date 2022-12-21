@@ -105,34 +105,27 @@
       line-height: 42px;
       margin-bottom: 30px;
       max-width: 455px;
-    };
+    }
     @include mq(600){
       font-size: 18px;
       line-height: 36px;
       margin-bottom: 20px;
       text-align: left;
-    };
+    }
   }
 
   &__input {
     font-family: "General Sans";
     align-self: stretch;
-    font-size: 32px;
-    line-height: 43px;
     border-radius: 6px;
-    margin-bottom: 60px;
-    padding: 24px 40px;
     color: $black;
+    margin-bottom: 60px;
 
     @include mq(1440){
-      margin-bottom: 20px;
-      width: 100%;
+      margin-bottom: 40px;
     };
     @include mq(600){
-      margin-bottom: 30px;
-      font-size: 18px;
-      line-height: 24px;
-      padding: 20px;
+      margin-bottom: 20px;
     };
   }
 

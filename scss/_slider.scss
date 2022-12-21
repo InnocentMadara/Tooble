@@ -76,15 +76,11 @@
       line-height: 78px;
     }
 
-    ;
-
     @include mq(600) {
       font-size: 10vw;
       line-height: 135%;
       text-align: start;
     }
-
-    ;
   }
 
   // .slider__pagination
@@ -124,13 +120,9 @@
       font-size: 24px;
     }
 
-    ;
-
     @include mq(600) {
       font-size: 16px;
     }
-
-    ;
   }
 
   //.slider__cursor
@@ -175,5 +167,12 @@
     object-fit: cover;
     width: 100%;
     min-height: max(100vh, 51vw);
+  }
+
+  &1 img{
+    object-position: 8% 50%;
+  }
+  &2 img{
+    object-position: 80% 50%;
   }
 }
