@@ -130,6 +130,7 @@
   // .footer__list-block
   &__list-block {
     display: grid;
+    list-style: none;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 44px 0;
@@ -200,6 +201,7 @@
   // .footer__terms-list
   &__terms-list {
     display: flex;
+    list-style: none;
   }
 
   // .footer__terms-item

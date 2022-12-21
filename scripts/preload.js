@@ -15,8 +15,6 @@ mainVideo.oncanplay = () => {isVideoLoaded = true};
 
 document.addEventListener('DOMContentLoaded', function (e) {
 
-  let itemsLoaded = 0;
-
   let interval = setInterval(function() {
     percent += 10;
     if(percent < 100){  

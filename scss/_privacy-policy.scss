@@ -10,7 +10,7 @@
   overflow-y: auto;
   transform: translateY(100%);
   transition: transform 0.3s;
-  
+
   &[active] {
     transform: translateY(0%);
   }
@@ -21,9 +21,11 @@
     align-items: center;
     padding: 26px 100px;
 
-    @include mq(900){
+    @include mq(900) {
       padding: 26px 50px;
-    };
+    }
+
+    ;
   }
 
   // .privacy-policy__back-button
@@ -45,13 +47,18 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 49px;
-    
-    @include mq(900){
+
+    @include mq(900) {
       font-size: 24px;
-    };
-    @include mq(600){
+    }
+
+    ;
+
+    @include mq(600) {
       display: none;
-    };
+    }
+
+    ;
   }
 
   // .privacy-policy__close-button
@@ -66,13 +73,29 @@
   // .privacy-policy__content
   &__content {
     padding: 120px 200px 200px 300px;
-    
-    @include mq(1440){
+
+    @include mq(1440) {
       padding: 60px 100px 100px 150px;
-    };
-    @include mq(900){
+    }
+
+    ;
+
+    @include mq(900) {
       padding: 20px 35px 35px 50px;
-    };
+    }
+
+    ;
+  }
+
+  // .privacy-policy__section  
+  &__section {
+    margin-bottom: 30px;
+  }
+
+  // .privacy-policy__section-heading  
+  &__section-heading {
+    color: $black;
+    margin-bottom: 15px;
   }
 
   // .privacy-policy__text  
@@ -81,28 +104,46 @@
     font-size: 32px;
     line-height: 175%;
     color: rgba($color: $black, $alpha: 0.85);
+    margin-bottom: 15px;
 
-    @include mq(1440){
+    @include mq(1440) {
       font-size: 24px;
-    };
-    @include mq(900){
-      font-size: 20px;
-    };
+    }
 
-    strong {
+    ;
+
+    @include mq(900) {
+      font-size: 20px;
+    }
+
+    ;
+
+    strong,
+    &--strong {
       color: $black;
       font-weight: 500;
     }
   }
 
-  &__content-top{
+  // privacy-policy__list
+  &__list {
+    list-style-type: square;
+    margin-left: 10%;
+  }
+
+  // privacy-policy__list-item
+  &__list-item {}
+
+  &__content-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
 
-    @include mq(600){
+    @include mq(600) {
       flex-direction: column;
-    };
+    }
+
+    ;
   }
 
   // .privacy-policy__title
@@ -113,20 +154,31 @@
     margin-bottom: 20px;
     line-height: 135%;
 
-    @include mq(1440){
+    @include mq(1440) {
       font-size: 48px;
-    };
-    @include mq(900){
+    }
+
+    ;
+
+    @include mq(900) {
       font-size: 32px;
-    };
+    }
+
+    ;
   }
 
-  &__date-modified{
+  &__date-modified {
     align-self: flex-end;
     margin-left: 20px;
-    @include mq(600){
+
+    @include mq(600) {
       margin-left: 0;
       margin-bottom: 20px;
-    };
+    }
+
+    ;
   }
+
+  //.privacy-policy__adress
+  &__adress {}
 }
