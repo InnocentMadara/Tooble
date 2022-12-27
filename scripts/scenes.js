@@ -22,22 +22,22 @@ let circleActive;
 // })
 
 function setPosition () {
-  if(!isTablet && !isMobile){
-    topPosition = "55%";
-    centerPosition = "50%";
-    bottomPosition = "45%";
+  // if(!isTablet && !isMobile){
+  //   topPosition = "55%";
+  //   centerPosition = "50%";
+  //   bottomPosition = "45%";
 
-    circle = "16px";
-    circleActive = "24px"
-  }
-  else{
+  //   circle = "16px";
+  //   circleActive = "24px"
+  // }
+  // else{
     topPosition = "15%";
     centerPosition = "10%";
     bottomPosition = "5%";
 
     circle = "10px";
     circleActive = "20px"
-  }
+  // }
 }
 
 setPosition();

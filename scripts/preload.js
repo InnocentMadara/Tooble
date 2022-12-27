@@ -14,6 +14,7 @@ document.body.style.overflowY = "hidden";
 mainVideo.oncanplay = () => {isVideoLoaded = true};
 
 document.addEventListener('DOMContentLoaded', function (e) {
+  startVideo.pause();
 
   let interval = setInterval(function() {
     percent += 10;

@@ -135,7 +135,7 @@
     @include mq(1024){
       height: 110vw;
     };
-    transition: transform 3s linear 2s;
+    transition: transform 3s linear 4s;
   }
   .video-start[appeared] &__element{
     transform: translateY(0%);

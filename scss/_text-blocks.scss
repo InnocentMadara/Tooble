@@ -7,16 +7,20 @@
   z-index: 12;
   left: 100px;
   color: $white;
-  transform: translateY(-50%);
+  // transform: translateY(-50%);
   max-width: 80vw;
 
-  @include mq(1024){
-    left: 40px;
-    transform: translateY(0%);
-  };
-  @include mq(600){
-    left: 20px;
-  };
+  body[device="Tablet"] &{  
+    // @include mq(1024){
+      left: 40px;
+      transform: translateY(0%);
+    // };
+  }
+  body[device="Mobile"] &{
+    @include mq(600){
+      left: 20px;
+    };
+  }
 }
 
 
@@ -24,23 +28,32 @@
   font-size: 128px;
   line-height: 135%;
   
-  @include mq(1024){
-    font-size: 96px;
-  };
-  @include mq(600){
-    font-size: 48px;
-  };
+  body[device="Tablet"] &{
+    // @include mq(1024){
+      font-size: 96px;
+    // };
+  }
+  body[device="Mobile"] &{  
+    @include mq(600){
+      font-size: 48px;
+    };
+  }
 }
 .title-normal{
   font-size: 64px;
   line-height: 135%;
   
-  @include mq(1024){
-    font-size: 48px;
-  };
-  @include mq(600){
-    font-size: 36px;
-  };
+  body[device="Tablet"] &{
+    // @include mq(1024){
+      font-size: 48px;
+    // };
+  }
+    
+  body[device="Mobile"] &{
+    @include mq(600){
+      font-size: 36px;
+    };
+  }
 }
 
 .get-discount {
@@ -95,6 +108,7 @@
 }
 
 .text2 {
+
 }
 
 .text3 {
@@ -107,11 +121,11 @@
   margin-top: 20px;
   opacity: 0;
   list-style: none;
-
-  @include mq(600){
-    margin-top: 5px;
-  };
-  
+  body[device="Mobile"] &{
+    @include mq(600){
+      margin-top: 5px;
+    };
+  }
   .text3-item {
     position: relative;
     padding-left: 64px;
@@ -125,18 +139,23 @@
     font-family: "General Sans";
     font-weight: 500;
 
-    @include mq(1024){
+    body[device="Tablet"] &{
       font-size: 20px;
       margin-top: 15px;
-    };
-    @include mq(600){
-      font-size: 16px;
-      margin-top: 10px;
-    };
-    @include mq(460){
-      font-size: 16px;
-      margin-top: 12px;
-    };
+      @include mq(1024){
+        margin-top: 5px;
+      };
+    }
+    body[device="Mobile"] &{
+      @include mq(600){
+        font-size: 16px;
+        margin-top: 10px;
+      };
+      @include mq(460){
+        font-size: 16px;
+        margin-top: 12px;
+      };
+    }
   }
 }
 
@@ -147,6 +166,9 @@
 
   .text5-title {
     margin-bottom: 80px;
+    // body[device="Mobile"] &{
+    //   transform: translateY(-75%);
+    // }
   }
 
   .text5-list{
@@ -172,15 +194,19 @@
     font-size: 24px;
     line-height: 32px;
 
-    @include mq(1024){
-      font-size: 20px;
-      padding-right: 30px;
-    };
-    @include mq(600){
-      padding-right: 20px;
-      font-size: 16px;
-      padding-left: 32px;
-    };
+    body[device="Tablet"] &{
+      // @include mq(1024){
+        font-size: 20px;
+        padding-right: 30px;
+      // };
+    }
+    body[device="Mobile"] &{
+      @include mq(600){
+        padding-right: 20px;
+        font-size: 16px;
+        padding-left: 32px;
+      };
+    }
 
     .line{
       position: absolute;
@@ -241,5 +267,12 @@
         border-top-right-radius: 12px;
       }
     }
+  }
+}
+
+.text6{
+  body[device="Mobile"] &{
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
